@@ -1,0 +1,5 @@
+C:\Users\ahamouch\Ways\Ways\obj\Debug\netcoreapp3.1\Ways.csprojAssemblyReference.cache
+C:\Users\ahamouch\Ways\Ways\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\ahamouch\Ways\Ways\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\ahamouch\Ways\Ways\obj\Debug\netcoreapp3.1\Ways_MarkupCompile.cache
+C:\Users\ahamouch\Ways\Ways\obj\Debug\netcoreapp3.1\Ways_MarkupCompile.lref
