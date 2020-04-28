@@ -13,11 +13,11 @@ using System.Windows.Shapes;
 namespace Ways.Vues
 {
     /// <summary>
-    /// Logique d'interaction pour Window1.xaml
+    /// Logique d'interaction pour QuizzQuestions.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class QuizzQuestions : Window
     {
-        public Window1()
+        public QuizzQuestions()
         {
             InitializeComponent();
         }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\ahamouch\ways\Ways\App.xaml
-41534393206
+9-2094958776
 
-11-1101556062
+16982712153
 210892176994
-MainWindow.xaml;Vues\EmailAdmin.xaml;Vues\HomeAdmin.xaml;Vues\Login.xaml;
+MainWindow.xaml;Vues\AdminEmailSettings.xaml;Vues\AdminLogin.xaml;Vues\FormularyList.xaml;Vues\HomeAdmin.xaml;Vues\Quizz.xaml;Vues\QuizzQuestions.xaml;Vues\UserList.xaml;Vues\UserLogin.xaml;
 
 True
 

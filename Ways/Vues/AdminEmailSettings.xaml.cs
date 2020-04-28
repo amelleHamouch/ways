@@ -13,11 +13,11 @@ using System.Windows.Shapes;
 namespace Ways.Vues
 {
     /// <summary>
-    /// Logique d'interaction pour HomeAdmin.xaml
+    /// Logique d'interaction pour AdminEmailSettings.xaml
     /// </summary>
-    public partial class HomeAdmin : Window
+    public partial class AdminEmailSettings : Window
     {
-        public HomeAdmin()
+        public AdminEmailSettings()
         {
             InitializeComponent();
         }
