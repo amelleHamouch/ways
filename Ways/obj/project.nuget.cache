@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xGBCiKj1Zcvvoz/S32lX8Yu413QDT0f+9j378be12Xkjza0WBFCShstE1m+ii+Twy0ag5Tyw5cYLgH53TkWyhA==",
+  "dgSpecHash": "PGbjMstyBCgnK6zrPyGxiIzUE/uPbLKP2Or+vc+tY3LtO1GCBNMkoN9AxMPCUHn79PZT0VyMuSyQWBq+Fe7ddw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ahamouch\\Ways\\Ways\\Ways.csproj",
+  "projectFilePath": "C:\\Users\\ahamouch\\ways\\Ways\\Ways.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahamouch\\.nuget\\packages\\microsoft.odata.client\\6.13.0\\microsoft.odata.client.6.13.0.nupkg.sha512",
     "C:\\Users\\ahamouch\\.nuget\\packages\\microsoft.odata.core\\6.13.0\\microsoft.odata.core.6.13.0.nupkg.sha512",

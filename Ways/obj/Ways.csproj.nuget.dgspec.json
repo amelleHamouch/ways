@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ahamouch\\Ways\\Ways\\Ways.csproj": {}
+    "C:\\Users\\ahamouch\\ways\\Ways\\Ways.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ahamouch\\Ways\\Ways\\Ways.csproj": {
+    "C:\\Users\\ahamouch\\ways\\Ways\\Ways.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahamouch\\Ways\\Ways\\Ways.csproj",
+        "projectUniqueName": "C:\\Users\\ahamouch\\ways\\Ways\\Ways.csproj",
         "projectName": "Ways",
-        "projectPath": "C:\\Users\\ahamouch\\Ways\\Ways\\Ways.csproj",
+        "projectPath": "C:\\Users\\ahamouch\\ways\\Ways\\Ways.csproj",
         "packagesPath": "C:\\Users\\ahamouch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahamouch\\Ways\\Ways\\obj\\",
+        "outputPath": "C:\\Users\\ahamouch\\ways\\Ways\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ahamouch\\AppData\\Roaming\\NuGet\\NuGet.Config",
