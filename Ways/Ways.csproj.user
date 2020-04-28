@@ -7,7 +7,27 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Vues\HomeAdmin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vues\Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vues\EmailAdmin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\HomeAdmin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\EmailAdmin.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
