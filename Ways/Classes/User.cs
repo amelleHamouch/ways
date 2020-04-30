@@ -1,6 +1,10 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
+using System.Windows.Navigation;
+using Ways.Vues;
 
 namespace Ways.Classes
 {
@@ -26,6 +30,47 @@ namespace Ways.Classes
         public User()
         {
             
+        }
+        public bool adminConnect(User admin) {
+
+
+
+            string login = admin.Login;
+            string pass = admin.Pass;
+            MySqlConnection sqlCon = Configurations.connection;
+
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                    sqlCon.Open();
+                String query = "SELECT COUNT(1) FROM user WHERE login=@Username AND password=@Password";
+                MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@Username", login);
+                sqlCmd.Parameters.AddWithValue("@Password", pass);
+                int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                if (count == 1)
+                {
+                    Console.WriteLine("Réussi");
+                    sqlCon.Close();
+
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("LOUPé");
+                    sqlCon.Close();
+
+                    return false;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("LOUPé");
+                return false;
+            }
+          
         }
 
 

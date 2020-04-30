@@ -29,38 +29,23 @@ namespace Ways.Vues
 
         private void SubmitAdmin(object sender, RoutedEventArgs e)
         {
-            MySqlConnection sqlCon = Configurations.connection;
 
-            try
+            User admin = new User(adminLogin.Text, adminPassBox.Password);
+            Boolean result = admin.adminConnect(admin);
+
+
+                if (result == true)
             {
-                if (sqlCon.State == ConnectionState.Closed)
-                    sqlCon.Open();
-                String query = "SELECT COUNT(1) FROM user WHERE login=@Username AND password=@Password";
-                MySqlCommand sqlCmd = new MySqlCommand (query, sqlCon);
-                sqlCmd.CommandType = CommandType.Text;
-                sqlCmd.Parameters.AddWithValue("@Username", adminLogin.Text);
-                sqlCmd.Parameters.AddWithValue("@Password", adminPassBox.Password);
-                int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
-                if (count == 1)
-                {
-                    Console.WriteLine("Réussi");
-                    this.NavigationService.Navigate(new HomeAdminPage()) ;
-                }
-                else
-                {
-                    MessageBox.Show("Identifiant ou mot de passe incorrect.");
-                    Console.WriteLine("LOUPé");
-                }
+                Console.WriteLine("Réussi");
+                this.NavigationService.Navigate(new HomeAdminPage());
             }
-            catch (Exception ex)
+            else
             {
+                MessageBox.Show("Identifiant ou mot de passe incorrect.");
                 Console.WriteLine("LOUPé");
-                MessageBox.Show(ex.Message);
             }
-            finally
-            {
-                sqlCon.Close();
-            }
+
+            
         }
     }
 }
