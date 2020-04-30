@@ -1,19 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup>
+    <ShowAllFiles>true</ShowAllFiles>
+  </PropertyGroup>
   <ItemGroup>
     <ApplicationDefinition Update="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Vues\HomeAdmin.xaml.cs">
+    <Compile Update="Vues\AdminEmailSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Vues\Login.xaml.cs">
+    <Compile Update="Vues\AdminLoginPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Vues\EmailAdmin.xaml.cs">
+    <Compile Update="Vues\FormularyList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vues\HomeAdminPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vues\Quizz.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vues\QuizzQuestions.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vues\UserList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vues\UserLoginPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -21,13 +38,28 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Vues\HomeAdmin.xaml">
+    <Page Update="Vues\AdminEmailSettings.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Vues\Login.xaml">
+    <Page Update="Vues\AdminLoginPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Vues\EmailAdmin.xaml">
+    <Page Update="Vues\FormularyList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\HomeAdminPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\Quizz.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\QuizzQuestions.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\UserList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\UserLoginPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

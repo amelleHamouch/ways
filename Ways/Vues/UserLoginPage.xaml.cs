@@ -8,16 +8,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Ways.Vues
 {
     /// <summary>
-    /// Logique d'interaction pour HomeAdmin.xaml
+    /// Logique d'interaction pour UserLoginPage.xaml
     /// </summary>
-    public partial class HomeAdmin : Window
+    public partial class UserLoginPage : Page
     {
-        public HomeAdmin()
+        public UserLoginPage()
         {
             InitializeComponent();
         }

@@ -6,5 +6,6 @@ namespace Ways.Classes
 {
     class Test
     {
+
     }
 }

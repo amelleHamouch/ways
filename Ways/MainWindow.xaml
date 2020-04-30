@@ -6,7 +6,14 @@
         xmlns:local="clr-namespace:Ways"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Grid>
-
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="35" >
+            <Button x:Name="AccessUserBtn" Content="Candidat"  Width="143" Click="Button_UserAccess" MinWidth="100"/>
+            <Button x:Name="AccessAdminBtn" Content="Administrateur CESI" MinWidth="100" Width="143" Click="Button_AdminAccess"/>
+        </StackPanel>
+        
+        <Frame x:Name="Main"></Frame>
+        
     </Grid>
 </Window>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ahamouch\ways\Ways\obj\Debug\netcoreapp3.1\
+C:\Users\ahamouch\Ways\Ways\obj\Debug\netcoreapp3.1\
 Ways
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\ahamouch\ways\Ways\App.xaml
-9-2094958776
+C:\Users\ahamouch\Ways\Ways\App.xaml
+9-507786280
 
-16982712153
-210892176994
-MainWindow.xaml;Vues\AdminEmailSettings.xaml;Vues\AdminLogin.xaml;Vues\FormularyList.xaml;Vues\HomeAdmin.xaml;Vues\Quizz.xaml;Vues\QuizzQuestions.xaml;Vues\UserList.xaml;Vues\UserLogin.xaml;
+16274102337
+203365291335
+MainWindow.xaml;Vues\AdminEmailSettings.xaml;Vues\AdminLoginPage.xaml;Vues\FormularyList.xaml;Vues\HomeAdminPage.xaml;Vues\Quizz.xaml;Vues\QuizzQuestions.xaml;Vues\UserList.xaml;Vues\UserLoginPage.xaml;
 
-True
+False
 

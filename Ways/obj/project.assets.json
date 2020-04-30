@@ -92,7 +92,7 @@
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.NETCore.Platforms/3.1.0": {
+      "Microsoft.NETCore.Platforms/3.0.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -110,190 +110,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.OData.Client/6.13.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OData.Core": "[6.13.0]"
-        },
-        "compile": {
-          "lib/net40/Microsoft.OData.Client.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Microsoft.OData.Client.dll": {}
-        },
-        "resource": {
-          "lib/net40/de/Microsoft.OData.Client.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net40/es/Microsoft.OData.Client.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net40/fr/Microsoft.OData.Client.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net40/it/Microsoft.OData.Client.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net40/ja/Microsoft.OData.Client.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net40/ko/Microsoft.OData.Client.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net40/ru/Microsoft.OData.Client.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net40/zh-Hans/Microsoft.OData.Client.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/net40/zh-Hant/Microsoft.OData.Client.resources.dll": {
-            "locale": "zh-Hant"
-          }
-        }
-      },
-      "Microsoft.OData.Core/6.13.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OData.Edm": "[6.13.0]",
-          "Microsoft.Spatial": "[6.13.0]"
-        },
-        "compile": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.OData.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.OData.Core.dll": {}
-        },
-        "resource": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/de/Microsoft.OData.Core.resources.dll": {
-            "locale": "de"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/es/Microsoft.OData.Core.resources.dll": {
-            "locale": "es"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/fr/Microsoft.OData.Core.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/it/Microsoft.OData.Core.resources.dll": {
-            "locale": "it"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ja/Microsoft.OData.Core.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ko/Microsoft.OData.Core.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ru/Microsoft.OData.Core.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hans/Microsoft.OData.Core.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hant/Microsoft.OData.Core.resources.dll": {
-            "locale": "zh-Hant"
-          }
-        }
-      },
-      "Microsoft.OData.Edm/6.13.0": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.OData.Edm.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.OData.Edm.dll": {}
-        },
-        "resource": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/de/Microsoft.OData.Edm.resources.dll": {
-            "locale": "de"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/es/Microsoft.OData.Edm.resources.dll": {
-            "locale": "es"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/fr/Microsoft.OData.Edm.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/it/Microsoft.OData.Edm.resources.dll": {
-            "locale": "it"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ja/Microsoft.OData.Edm.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ko/Microsoft.OData.Edm.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ru/Microsoft.OData.Edm.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hans/Microsoft.OData.Edm.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hant/Microsoft.OData.Edm.resources.dll": {
-            "locale": "zh-Hant"
-          }
-        }
-      },
-      "Microsoft.OData.ProxyExtensions/1.0.35": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OData.Client": "6.11.0"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/Microsoft.OData.ProxyExtensions.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/Microsoft.OData.ProxyExtensions.dll": {}
-        }
-      },
-      "Microsoft.Office365.OutlookServices/1.0.41": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OData.Client": "6.13.0",
-          "Microsoft.OData.ProxyExtensions": "1.0.35"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80/Microsoft.Office365.OutlookServices.Portable.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80/Microsoft.Office365.OutlookServices.Portable.dll": {}
-        }
-      },
-      "Microsoft.Spatial/6.13.0": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.Spatial.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.Spatial.dll": {}
-        },
-        "resource": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/de/Microsoft.Spatial.resources.dll": {
-            "locale": "de"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/es/Microsoft.Spatial.resources.dll": {
-            "locale": "es"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/fr/Microsoft.Spatial.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/it/Microsoft.Spatial.resources.dll": {
-            "locale": "it"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ja/Microsoft.Spatial.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ko/Microsoft.Spatial.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ru/Microsoft.Spatial.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hans/Microsoft.Spatial.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hant/Microsoft.Spatial.resources.dll": {
-            "locale": "zh-Hant"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -303,29 +119,6 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Microsoft.Win32.Registry/4.7.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.AccessControl": "4.7.0",
-          "System.Security.Principal.Windows": "4.7.0"
-        },
-        "compile": {
-          "ref/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
         }
       },
       "Microsoft.Win32.SystemEvents/4.6.0": {
@@ -461,14 +254,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "runtime.native.System.Data.SqlClient.sni/4.7.0": {
-        "type": "package",
-        "dependencies": {
-          "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
-          "runtime.win-x64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
-          "runtime.win-x86.runtime.native.System.Data.SqlClient.sni": "4.4.0"
-        }
-      },
       "runtime.native.System.IO.Compression/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -600,33 +385,6 @@
           }
         }
       },
-      "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
-        "type": "package",
-        "runtimeTargets": {
-          "runtimes/win-arm64/native/sni.dll": {
-            "assetType": "native",
-            "rid": "win-arm64"
-          }
-        }
-      },
-      "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
-        "type": "package",
-        "runtimeTargets": {
-          "runtimes/win-x64/native/sni.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          }
-        }
-      },
-      "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
-        "type": "package",
-        "runtimeTargets": {
-          "runtimes/win-x86/native/sni.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
-          }
-        }
-      },
       "SSH.NET/2016.1.0": {
         "type": "package",
         "dependencies": {
@@ -749,30 +507,6 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Console.dll": {}
-        }
-      },
-      "System.Data.SqlClient/4.8.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Win32.Registry": "4.7.0",
-          "System.Security.Principal.Windows": "4.7.0",
-          "runtime.native.System.Data.SqlClient.sni": "4.7.0"
-        },
-        "compile": {
-          "ref/netcoreapp2.1/System.Data.SqlClient.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.1/System.Data.SqlClient.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -1417,11 +1151,11 @@
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
-      "System.Security.AccessControl/4.7.0": {
+      "System.Security.AccessControl/4.6.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.1.0",
-          "System.Security.Principal.Windows": "4.7.0"
+          "Microsoft.NETCore.Platforms": "3.0.0",
+          "System.Security.Principal.Windows": "4.6.0"
         },
         "compile": {
           "ref/netstandard2.0/System.Security.AccessControl.dll": {}
@@ -1681,7 +1415,7 @@
           "lib/netcoreapp3.0/System.Security.Permissions.dll": {}
         }
       },
-      "System.Security.Principal.Windows/4.7.0": {
+      "System.Security.Principal.Windows/4.6.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp3.0/System.Security.Principal.Windows.dll": {}
@@ -2117,17 +1851,17 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "Microsoft.NETCore.Platforms/3.1.0": {
-      "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
+    "Microsoft.NETCore.Platforms/3.0.0": {
+      "sha512": "TsETIgVJb/AKoYfSP+iCxkuly5d3inZjTdx/ItZLk2CxY85v8083OBS3uai84kK3/baLnS5/b5XGs6zR7SuuHQ==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/3.1.0",
+      "path": "microsoft.netcore.platforms/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+        "microsoft.netcore.platforms.3.0.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
@@ -2147,196 +1881,6 @@
         "microsoft.netcore.targets.1.1.0.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
-      ]
-    },
-    "Microsoft.OData.Client/6.13.0": {
-      "sha512": "ZTT4rmhQ+NVICQWStpff8hGNkWFHMaR4QRwXIaMozWXTM3/tvPBBf9ouf7HKGuI1DKsh4+Ylk2d8Geu4J5Gnew==",
-      "type": "package",
-      "path": "microsoft.odata.client/6.13.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/Microsoft.OData.Client.dll",
-        "lib/net40/Microsoft.OData.Client.xml",
-        "lib/net40/de/Microsoft.OData.Client.resources.dll",
-        "lib/net40/es/Microsoft.OData.Client.resources.dll",
-        "lib/net40/fr/Microsoft.OData.Client.resources.dll",
-        "lib/net40/it/Microsoft.OData.Client.resources.dll",
-        "lib/net40/ja/Microsoft.OData.Client.resources.dll",
-        "lib/net40/ko/Microsoft.OData.Client.resources.dll",
-        "lib/net40/ru/Microsoft.OData.Client.resources.dll",
-        "lib/net40/zh-Hans/Microsoft.OData.Client.resources.dll",
-        "lib/net40/zh-Hant/Microsoft.OData.Client.resources.dll",
-        "lib/portable-net45+wp8+win8+wpa/Microsoft.OData.Client.dll",
-        "lib/portable-net45+wp8+win8+wpa/Microsoft.OData.Client.xml",
-        "lib/portable-net45+wp8+win8+wpa/de/Microsoft.OData.Client.resources.dll",
-        "lib/portable-net45+wp8+win8+wpa/es/Microsoft.OData.Client.resources.dll",
-        "lib/portable-net45+wp8+win8+wpa/fr/Microsoft.OData.Client.resources.dll",
-        "lib/portable-net45+wp8+win8+wpa/it/Microsoft.OData.Client.resources.dll",
-        "lib/portable-net45+wp8+win8+wpa/ja/Microsoft.OData.Client.resources.dll",
-        "lib/portable-net45+wp8+win8+wpa/ko/Microsoft.OData.Client.resources.dll",
-        "lib/portable-net45+wp8+win8+wpa/ru/Microsoft.OData.Client.resources.dll",
-        "lib/portable-net45+wp8+win8+wpa/zh-Hans/Microsoft.OData.Client.resources.dll",
-        "lib/portable-net45+wp8+win8+wpa/zh-Hant/Microsoft.OData.Client.resources.dll",
-        "microsoft.odata.client.6.13.0.nupkg.sha512",
-        "microsoft.odata.client.nuspec"
-      ]
-    },
-    "Microsoft.OData.Core/6.13.0": {
-      "sha512": "6dV1/1ChQ7THn37o46QROTW25m888Vq7w8oBQuedZ4rqvi7QbQT9KX/ZiJMryZ8qy8i7gtc/fxVLy+fsOGjguQ==",
-      "type": "package",
-      "path": "microsoft.odata.core/6.13.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/dnx451/Microsoft.OData.Core.dll",
-        "lib/dnx451/Microsoft.OData.Core.xml",
-        "lib/dnx451/de/Microsoft.OData.Core.resources.dll",
-        "lib/dnx451/es/Microsoft.OData.Core.resources.dll",
-        "lib/dnx451/fr/Microsoft.OData.Core.resources.dll",
-        "lib/dnx451/it/Microsoft.OData.Core.resources.dll",
-        "lib/dnx451/ja/Microsoft.OData.Core.resources.dll",
-        "lib/dnx451/ko/Microsoft.OData.Core.resources.dll",
-        "lib/dnx451/ru/Microsoft.OData.Core.resources.dll",
-        "lib/dnx451/zh-Hans/Microsoft.OData.Core.resources.dll",
-        "lib/dnx451/zh-Hant/Microsoft.OData.Core.resources.dll",
-        "lib/dnxcore50/Microsoft.OData.Core.dll",
-        "lib/dnxcore50/Microsoft.OData.Core.xml",
-        "lib/dnxcore50/de/Microsoft.OData.Core.resources.dll",
-        "lib/dnxcore50/es/Microsoft.OData.Core.resources.dll",
-        "lib/dnxcore50/fr/Microsoft.OData.Core.resources.dll",
-        "lib/dnxcore50/it/Microsoft.OData.Core.resources.dll",
-        "lib/dnxcore50/ja/Microsoft.OData.Core.resources.dll",
-        "lib/dnxcore50/ko/Microsoft.OData.Core.resources.dll",
-        "lib/dnxcore50/ru/Microsoft.OData.Core.resources.dll",
-        "lib/dnxcore50/zh-Hans/Microsoft.OData.Core.resources.dll",
-        "lib/dnxcore50/zh-Hant/Microsoft.OData.Core.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.OData.Core.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.OData.Core.xml",
-        "lib/portable-net40+sl5+wp8+win8+wpa/de/Microsoft.OData.Core.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/es/Microsoft.OData.Core.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/fr/Microsoft.OData.Core.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/it/Microsoft.OData.Core.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/ja/Microsoft.OData.Core.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/ko/Microsoft.OData.Core.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/ru/Microsoft.OData.Core.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hans/Microsoft.OData.Core.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hant/Microsoft.OData.Core.resources.dll",
-        "microsoft.odata.core.6.13.0.nupkg.sha512",
-        "microsoft.odata.core.nuspec"
-      ]
-    },
-    "Microsoft.OData.Edm/6.13.0": {
-      "sha512": "BMuH6sSduTmVO67X3SaaDSCIif4Jt/EsZEYB6r7E9SJz5ZJbqmdgZTCTBH3xCGUEN8i/E16pw3y2XAxg+bpZug==",
-      "type": "package",
-      "path": "microsoft.odata.edm/6.13.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/dnx451/Microsoft.OData.Edm.dll",
-        "lib/dnx451/Microsoft.OData.Edm.xml",
-        "lib/dnx451/de/Microsoft.OData.Edm.resources.dll",
-        "lib/dnx451/es/Microsoft.OData.Edm.resources.dll",
-        "lib/dnx451/fr/Microsoft.OData.Edm.resources.dll",
-        "lib/dnx451/it/Microsoft.OData.Edm.resources.dll",
-        "lib/dnx451/ja/Microsoft.OData.Edm.resources.dll",
-        "lib/dnx451/ko/Microsoft.OData.Edm.resources.dll",
-        "lib/dnx451/ru/Microsoft.OData.Edm.resources.dll",
-        "lib/dnx451/zh-Hans/Microsoft.OData.Edm.resources.dll",
-        "lib/dnx451/zh-Hant/Microsoft.OData.Edm.resources.dll",
-        "lib/dnxcore50/Microsoft.OData.Edm.dll",
-        "lib/dnxcore50/Microsoft.OData.Edm.xml",
-        "lib/dnxcore50/de/Microsoft.OData.Edm.resources.dll",
-        "lib/dnxcore50/es/Microsoft.OData.Edm.resources.dll",
-        "lib/dnxcore50/fr/Microsoft.OData.Edm.resources.dll",
-        "lib/dnxcore50/it/Microsoft.OData.Edm.resources.dll",
-        "lib/dnxcore50/ja/Microsoft.OData.Edm.resources.dll",
-        "lib/dnxcore50/ko/Microsoft.OData.Edm.resources.dll",
-        "lib/dnxcore50/ru/Microsoft.OData.Edm.resources.dll",
-        "lib/dnxcore50/zh-Hans/Microsoft.OData.Edm.resources.dll",
-        "lib/dnxcore50/zh-Hant/Microsoft.OData.Edm.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.OData.Edm.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.OData.Edm.xml",
-        "lib/portable-net40+sl5+wp8+win8+wpa/de/Microsoft.OData.Edm.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/es/Microsoft.OData.Edm.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/fr/Microsoft.OData.Edm.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/it/Microsoft.OData.Edm.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/ja/Microsoft.OData.Edm.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/ko/Microsoft.OData.Edm.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/ru/Microsoft.OData.Edm.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hans/Microsoft.OData.Edm.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hant/Microsoft.OData.Edm.resources.dll",
-        "microsoft.odata.edm.6.13.0.nupkg.sha512",
-        "microsoft.odata.edm.nuspec"
-      ]
-    },
-    "Microsoft.OData.ProxyExtensions/1.0.35": {
-      "sha512": "AUwwV7G38PVzGNggcz/hBI4+U5t2YFRr9KDu1FmllochkXrUfRETygjod32Z7HJ7LkvZRzkXr5Gp+/E6nH8iUQ==",
-      "type": "package",
-      "path": "microsoft.odata.proxyextensions/1.0.35",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "License-Stable.rtf",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/Microsoft.OData.ProxyExtensions.dll",
-        "microsoft.odata.proxyextensions.1.0.35.nupkg.sha512",
-        "microsoft.odata.proxyextensions.nuspec"
-      ]
-    },
-    "Microsoft.Office365.OutlookServices/1.0.41": {
-      "sha512": "YFjsvdVctuQ0Ae9d/nIwHCTYrDaZNu1aAeCS8oyndC1c0iFVWT3SyKL+K8iHe3waiNb1YSoCEFWWf5zqEwA+Cg==",
-      "type": "package",
-      "path": "microsoft.office365.outlookservices/1.0.41",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/portable-net45+win+wpa81+wp80/Microsoft.Office365.OutlookServices.Portable.dll",
-        "microsoft.office365.outlookservices.1.0.41.nupkg.sha512",
-        "microsoft.office365.outlookservices.nuspec"
-      ]
-    },
-    "Microsoft.Spatial/6.13.0": {
-      "sha512": "B1KZi/w1ptNPN8HzeRYg8LG4vyx5ulVnV0IJ4WWplU1vNpxDf7tKh1MV0KdZODc9mkh0Sc2WziznXd1AouW6SQ==",
-      "type": "package",
-      "path": "microsoft.spatial/6.13.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/dnx451/Microsoft.Spatial.dll",
-        "lib/dnx451/Microsoft.Spatial.xml",
-        "lib/dnx451/de/Microsoft.Spatial.resources.dll",
-        "lib/dnx451/es/Microsoft.Spatial.resources.dll",
-        "lib/dnx451/fr/Microsoft.Spatial.resources.dll",
-        "lib/dnx451/it/Microsoft.Spatial.resources.dll",
-        "lib/dnx451/ja/Microsoft.Spatial.resources.dll",
-        "lib/dnx451/ko/Microsoft.Spatial.resources.dll",
-        "lib/dnx451/ru/Microsoft.Spatial.resources.dll",
-        "lib/dnx451/zh-Hans/Microsoft.Spatial.resources.dll",
-        "lib/dnx451/zh-Hant/Microsoft.Spatial.resources.dll",
-        "lib/dnxcore50/Microsoft.Spatial.dll",
-        "lib/dnxcore50/Microsoft.Spatial.xml",
-        "lib/dnxcore50/de/Microsoft.Spatial.resources.dll",
-        "lib/dnxcore50/es/Microsoft.Spatial.resources.dll",
-        "lib/dnxcore50/fr/Microsoft.Spatial.resources.dll",
-        "lib/dnxcore50/it/Microsoft.Spatial.resources.dll",
-        "lib/dnxcore50/ja/Microsoft.Spatial.resources.dll",
-        "lib/dnxcore50/ko/Microsoft.Spatial.resources.dll",
-        "lib/dnxcore50/ru/Microsoft.Spatial.resources.dll",
-        "lib/dnxcore50/zh-Hans/Microsoft.Spatial.resources.dll",
-        "lib/dnxcore50/zh-Hant/Microsoft.Spatial.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.Spatial.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.Spatial.xml",
-        "lib/portable-net40+sl5+wp8+win8+wpa/de/Microsoft.Spatial.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/es/Microsoft.Spatial.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/fr/Microsoft.Spatial.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/it/Microsoft.Spatial.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/ja/Microsoft.Spatial.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/ko/Microsoft.Spatial.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/ru/Microsoft.Spatial.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hans/Microsoft.Spatial.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hant/Microsoft.Spatial.resources.dll",
-        "microsoft.spatial.6.13.0.nupkg.sha512",
-        "microsoft.spatial.nuspec"
       ]
     },
     "Microsoft.Win32.Primitives/4.3.0": {
@@ -2375,53 +1919,6 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
-      ]
-    },
-    "Microsoft.Win32.Registry/4.7.0": {
-      "sha512": "KSrRMb5vNi0CWSGG1++id2ZOs/1QhRqROt+qgbEAdQuGjGrFcl4AOl4/exGPUYz2wUnU42nvJqon1T3U0kPXLA==",
-      "type": "package",
-      "path": "microsoft.win32.registry/4.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/Microsoft.Win32.Registry.dll",
-        "lib/net461/Microsoft.Win32.Registry.dll",
-        "lib/net461/Microsoft.Win32.Registry.xml",
-        "lib/netstandard1.3/Microsoft.Win32.Registry.dll",
-        "lib/netstandard2.0/Microsoft.Win32.Registry.dll",
-        "lib/netstandard2.0/Microsoft.Win32.Registry.xml",
-        "microsoft.win32.registry.4.7.0.nupkg.sha512",
-        "microsoft.win32.registry.nuspec",
-        "ref/net46/Microsoft.Win32.Registry.dll",
-        "ref/net461/Microsoft.Win32.Registry.dll",
-        "ref/net461/Microsoft.Win32.Registry.xml",
-        "ref/net472/Microsoft.Win32.Registry.dll",
-        "ref/net472/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/Microsoft.Win32.Registry.dll",
-        "ref/netstandard1.3/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/de/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/es/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/fr/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/it/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/ja/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/ko/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/ru/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/zh-hans/Microsoft.Win32.Registry.xml",
-        "ref/netstandard1.3/zh-hant/Microsoft.Win32.Registry.xml",
-        "ref/netstandard2.0/Microsoft.Win32.Registry.dll",
-        "ref/netstandard2.0/Microsoft.Win32.Registry.xml",
-        "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
-        "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
-        "runtimes/win/lib/net46/Microsoft.Win32.Registry.dll",
-        "runtimes/win/lib/net461/Microsoft.Win32.Registry.dll",
-        "runtimes/win/lib/net461/Microsoft.Win32.Registry.xml",
-        "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll",
-        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
-        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
-        "useSharedDesignerContext.txt",
-        "version.txt"
       ]
     },
     "Microsoft.Win32.SystemEvents/4.6.0": {
@@ -2547,21 +2044,6 @@
         "lib/netstandard1.0/_._",
         "runtime.native.system.4.3.0.nupkg.sha512",
         "runtime.native.system.nuspec"
-      ]
-    },
-    "runtime.native.System.Data.SqlClient.sni/4.7.0": {
-      "sha512": "9kyFSIdN3T0qjDQ2R0HRXYIhS3l5psBzQi6qqhdLz+SzFyEy4sVxNOke+yyYv8Cu8rPER12c3RDjLT8wF3WBYQ==",
-      "type": "package",
-      "path": "runtime.native.system.data.sqlclient.sni/4.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
-        "runtime.native.system.data.sqlclient.sni.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
       ]
     },
     "runtime.native.System.IO.Compression/4.3.0": {
@@ -2730,54 +2212,6 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
-      ]
-    },
-    "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
-      "sha512": "LbrynESTp3bm5O/+jGL8v0Qg5SJlTV08lpIpFesXjF6uGNMWqFnUQbYBJwZTeua6E/Y7FIM1C54Ey1btLWupdg==",
-      "type": "package",
-      "path": "runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-        "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.nuspec",
-        "runtimes/win-arm64/native/sni.dll",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
-      "sha512": "38ugOfkYJqJoX9g6EYRlZB5U2ZJH51UP8ptxZgdpS07FgOEToV+lS11ouNK2PM12Pr6X/PpT5jK82G3DwH/SxQ==",
-      "type": "package",
-      "path": "runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-        "runtime.win-x64.runtime.native.system.data.sqlclient.sni.nuspec",
-        "runtimes/win-x64/native/sni.dll",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
-      "sha512": "YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
-      "type": "package",
-      "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-        "runtime.win-x86.runtime.native.system.data.sqlclient.sni.nuspec",
-        "runtimes/win-x86/native/sni.dll",
-        "useSharedDesignerContext.txt",
-        "version.txt"
       ]
     },
     "SSH.NET/2016.1.0": {
@@ -3117,92 +2551,6 @@
         "ref/xamarinwatchos10/_._",
         "system.console.4.3.0.nupkg.sha512",
         "system.console.nuspec"
-      ]
-    },
-    "System.Data.SqlClient/4.8.1": {
-      "sha512": "HKLykcv6eZLbLnSMnlQ6Os4+UAmFE+AgYm92CTvJYeTOBtOYusX3qu8OoGhFrnKZax91UcLcDo5vPrqvJUTSNQ==",
-      "type": "package",
-      "path": "system.data.sqlclient/4.8.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net451/System.Data.SqlClient.dll",
-        "lib/net46/System.Data.SqlClient.dll",
-        "lib/net461/System.Data.SqlClient.dll",
-        "lib/net461/System.Data.SqlClient.xml",
-        "lib/netcoreapp2.1/System.Data.SqlClient.dll",
-        "lib/netcoreapp2.1/System.Data.SqlClient.xml",
-        "lib/netstandard1.2/System.Data.SqlClient.dll",
-        "lib/netstandard1.2/System.Data.SqlClient.xml",
-        "lib/netstandard1.3/System.Data.SqlClient.dll",
-        "lib/netstandard1.3/System.Data.SqlClient.xml",
-        "lib/netstandard2.0/System.Data.SqlClient.dll",
-        "lib/netstandard2.0/System.Data.SqlClient.xml",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net451/System.Data.SqlClient.dll",
-        "ref/net46/System.Data.SqlClient.dll",
-        "ref/net461/System.Data.SqlClient.dll",
-        "ref/net461/System.Data.SqlClient.xml",
-        "ref/netcoreapp2.1/System.Data.SqlClient.dll",
-        "ref/netcoreapp2.1/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/System.Data.SqlClient.dll",
-        "ref/netstandard1.2/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/de/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/es/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/fr/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/it/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/ja/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/ko/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/ru/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/zh-hans/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/zh-hant/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/System.Data.SqlClient.dll",
-        "ref/netstandard1.3/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/de/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/es/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/fr/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/it/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/ja/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/ko/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/ru/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/zh-hans/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/zh-hant/System.Data.SqlClient.xml",
-        "ref/netstandard2.0/System.Data.SqlClient.dll",
-        "ref/netstandard2.0/System.Data.SqlClient.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll",
-        "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.xml",
-        "runtimes/unix/lib/netstandard1.3/System.Data.SqlClient.dll",
-        "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll",
-        "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.xml",
-        "runtimes/win/lib/net451/System.Data.SqlClient.dll",
-        "runtimes/win/lib/net46/System.Data.SqlClient.dll",
-        "runtimes/win/lib/net461/System.Data.SqlClient.dll",
-        "runtimes/win/lib/net461/System.Data.SqlClient.xml",
-        "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll",
-        "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.xml",
-        "runtimes/win/lib/netstandard1.3/System.Data.SqlClient.dll",
-        "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll",
-        "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.xml",
-        "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
-        "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.xml",
-        "system.data.sqlclient.4.8.1.nupkg.sha512",
-        "system.data.sqlclient.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
       ]
     },
     "System.Diagnostics.Debug/4.3.0": {
@@ -5348,10 +4696,10 @@
         "system.runtime.numerics.nuspec"
       ]
     },
-    "System.Security.AccessControl/4.7.0": {
-      "sha512": "JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg==",
+    "System.Security.AccessControl/4.6.0": {
+      "sha512": "gmlk6khICtVhiUnVBBtlsH0H/5QFDqhTZgtpp3AX14wWE6OIE+BX95NLD+X4AolXnIy/oXpNNmXYnsNfW1KuDQ==",
       "type": "package",
-      "path": "system.security.accesscontrol/4.7.0",
+      "path": "system.security.accesscontrol/4.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5388,7 +4736,7 @@
         "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.xml",
         "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
         "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.accesscontrol.4.7.0.nupkg.sha512",
+        "system.security.accesscontrol.4.6.0.nupkg.sha512",
         "system.security.accesscontrol.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -5705,10 +5053,10 @@
         "version.txt"
       ]
     },
-    "System.Security.Principal.Windows/4.7.0": {
-      "sha512": "ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
+    "System.Security.Principal.Windows/4.6.0": {
+      "sha512": "Mdukseovp0YIGaz16FMH6nbfgZkrCFOJbtXQptv0aeBO9h775Ilb9+TDwLVTKikoW7y7CY7lpoXl9zmZ5G3ndA==",
       "type": "package",
-      "path": "system.security.principal.windows/4.7.0",
+      "path": "system.security.principal.windows/4.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5753,7 +5101,7 @@
         "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
         "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.principal.windows.4.7.0.nupkg.sha512",
+        "system.security.principal.windows.4.6.0.nupkg.sha512",
         "system.security.principal.windows.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -6599,9 +5947,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Microsoft.Office365.OutlookServices >= 1.0.41",
-      "MySql.Data >= 8.0.20",
-      "System.Data.SqlClient >= 4.8.1"
+      "MySql.Data >= 8.0.20"
     ]
   },
   "packageFolders": {
@@ -6610,11 +5956,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahamouch\\ways\\Ways\\Ways.csproj",
+      "projectUniqueName": "C:\\Users\\ahamouch\\Ways\\Ways\\Ways.csproj",
       "projectName": "Ways",
-      "projectPath": "C:\\Users\\ahamouch\\ways\\Ways\\Ways.csproj",
+      "projectPath": "C:\\Users\\ahamouch\\Ways\\Ways\\Ways.csproj",
       "packagesPath": "C:\\Users\\ahamouch\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahamouch\\ways\\Ways\\obj\\",
+      "outputPath": "C:\\Users\\ahamouch\\Ways\\Ways\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ahamouch\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6641,17 +5987,9 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
-          "Microsoft.Office365.OutlookServices": {
-            "target": "Package",
-            "version": "[1.0.41, )"
-          },
           "MySql.Data": {
             "target": "Package",
             "version": "[8.0.20, )"
-          },
-          "System.Data.SqlClient": {
-            "target": "Package",
-            "version": "[4.8.1, )"
           }
         },
         "imports": [
@@ -6675,67 +6013,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'Microsoft.OData.Client 6.13.0' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' au lieu du framework cible du projet '.NETCoreApp,Version=v3.1'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
-      "libraryId": "Microsoft.OData.Client",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'Microsoft.OData.Core 6.13.0' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' au lieu du framework cible du projet '.NETCoreApp,Version=v3.1'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
-      "libraryId": "Microsoft.OData.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'Microsoft.OData.Edm 6.13.0' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' au lieu du framework cible du projet '.NETCoreApp,Version=v3.1'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
-      "libraryId": "Microsoft.OData.Edm",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'Microsoft.OData.ProxyExtensions 1.0.35' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' au lieu du framework cible du projet '.NETCoreApp,Version=v3.1'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
-      "libraryId": "Microsoft.OData.ProxyExtensions",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'Microsoft.Office365.OutlookServices 1.0.41' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' au lieu du framework cible du projet '.NETCoreApp,Version=v3.1'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
-      "libraryId": "Microsoft.Office365.OutlookServices",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'Microsoft.Spatial 6.13.0' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' au lieu du framework cible du projet '.NETCoreApp,Version=v3.1'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
-      "libraryId": "Microsoft.Spatial",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  }
 }
