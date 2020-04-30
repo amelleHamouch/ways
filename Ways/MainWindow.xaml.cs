@@ -13,22 +13,9 @@ namespace Ways
         public MainWindow()
         {
             InitializeComponent();
-         
+            Main.Content = new WaysHomePage();
         }
 
-        private void Button_UserAccess(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new UserLoginPage();
-            AccessUserBtn.Visibility = Visibility.Collapsed;
-            AccessAdminBtn.Visibility = Visibility.Collapsed;
-
-        }
-
-        private void Button_AdminAccess(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new AdminLoginPage();
-            AccessUserBtn.Visibility = Visibility.Collapsed;
-            AccessAdminBtn.Visibility = Visibility.Collapsed;
-        }
+       
     }
 }

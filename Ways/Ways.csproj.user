@@ -33,6 +33,9 @@
     <Compile Update="Vues\UserLoginPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Vues\WaysHomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -60,6 +63,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\UserLoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\WaysHomePage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

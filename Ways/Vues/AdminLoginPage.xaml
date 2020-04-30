@@ -9,7 +9,7 @@
       Title="AdminLoginPage"  FontSize="22" Height="319" Width="300">
 
     <Grid>
-        <Border Background="#448085" CornerRadius="20" Margin="20">
+        <Border Background="#448085" CornerRadius="20" Margin="10,0,0,0">
             <StackPanel Margin="20">
                 <Label Content="Login" Foreground="White" FontSize="30" HorizontalAlignment="Center" Height="62" Width="104"></Label>
                 <Separator></Separator>
@@ -17,7 +17,7 @@
                 <TextBox Name="adminLogin" Background="#005C75" Foreground="White" FontSize="20"></TextBox>
                 <Label Content="Mot de passe" Foreground="White"></Label>
                 <PasswordBox x:Name="adminPassBox" Background="#005C75" Foreground="White" FontSize="20"/>
-                <Button x:Name="submit" Content="Valider " Foreground="#448085" FontSize="22" Margin="60 10" Background="#FDE181" Height="33" Width="80" Click="SubmitAdmin" />
+                <Button x:Name="submit" Content="Valider " Foreground="#448085" FontSize="22" Margin="60 10" Background="#FDE181" Height="51" Width="132" Click="SubmitAdmin" />
                 <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Center" Grid.Row="6" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="780" Height="52"/>
             </StackPanel>
         </Border>
