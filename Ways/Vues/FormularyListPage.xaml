@@ -24,9 +24,16 @@
         <ListView  x:Name="formularyList" Margin="0,50,0,0" Grid.Row="0" Grid.RowSpan="4" VerticalAlignment="Top" HorizontalAlignment="Center">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Id du Questionnaire" Width="220" DisplayMemberBinding="{Binding Id}"/>
-                    <GridViewColumn Header="Nom du Questionnaire" Width="220" DisplayMemberBinding="{Binding Montant}"/>
-                    <GridViewColumn Header="Action" Width="120" />
+                    <GridViewColumn Header="Id du Questionnaire" Width="220" DisplayMemberBinding="{Binding IdFormulary}"/>
+                    <GridViewColumn Header="Nom du Questionnaire" Width="220" DisplayMemberBinding="{Binding Name}"/>
+
+                    <GridViewColumn>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="détails" Margin="0" VerticalAlignment="Center" Click="modifyForm"  />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -35,7 +42,7 @@
             <TextBox x:Name="formularyNameInput" Width="180" />
             <Button x:Name="FormularyCreate" Content="Nouveau Formulaire" HorizontalAlignment="Right" VerticalAlignment="Top" Click="createFormulary" Margin="20,0,0,0"/>
         </StackPanel>
-
+        
 
     </Grid>
 </Page>

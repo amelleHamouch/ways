@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -37,10 +39,46 @@ namespace Ways.Vues
             Formulary formulary = new Formulary(formularyName);
         }
 
-        private void getFormularies()
+        private void modifyForm(object sender, RoutedEventArgs e)
         {
+           
+
 
         }
+
+        private List<Formulary> getFormularies()
+        {
+
+            List<Formulary> result = new List<Formulary>();
+            MySqlConnection sqlCon = Configurations.connection;
+
+
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
+            String query = "SELECT * FROM formulary ;";
+            MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+            sqlCmd.CommandType = CommandType.Text;
+
+            int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+            MySqlDataReader reader = sqlCmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Formulary form = new Formulary();
+
+                {
+
+                    form.IdFormulary = reader.GetInt32(0);
+                    form.Name = reader.GetString(1);
+
+                };
+                result.Add(form);
+            }
+            reader.Close();
+            sqlCon.Close();
+            return result;
+        }
+
+
 
     }
 }

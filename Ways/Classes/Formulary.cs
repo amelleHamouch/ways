@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNet.SignalR.Messaging;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Linq;
 using System.Text;
 using Ways.Classes;
 namespace Ways.Classes
@@ -55,7 +56,11 @@ namespace Ways.Classes
             return (Convert.ToInt32(sqlCmd.ExecuteScalar()));
      
         }
+      
 
 
     }
+
+
 }
+
