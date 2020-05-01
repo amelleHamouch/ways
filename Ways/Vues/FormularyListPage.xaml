@@ -30,7 +30,7 @@
                     <GridViewColumn>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="détails" Margin="0" VerticalAlignment="Center" Click="modifyForm"  />
+                                <Button Tag="{Binding IdFormulary}" Content="détails" Margin="0" VerticalAlignment="Center" Click="modifyForm" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

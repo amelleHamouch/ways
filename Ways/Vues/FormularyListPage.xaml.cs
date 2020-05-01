@@ -37,11 +37,16 @@ namespace Ways.Vues
         {
             string formularyName = formularyNameInput.Text;
             Formulary formulary = new Formulary(formularyName);
+
         }
 
         private void modifyForm(object sender, RoutedEventArgs e)
         {
-           
+            string idFormToModify =( ((Button)sender).Tag).ToString();
+
+            QuizzQuestionsPage page = new QuizzQuestionsPage(idFormToModify);
+
+            NavigationService.Navigate(page);
 
 
         }

@@ -8,8 +8,61 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="QuizzQuestionsPage">
 
-    <Grid>
+    <Grid Width="800" Height="500">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+
         <Label Content="Liste Questions" Foreground="#ff7f50" FontSize="30" HorizontalAlignment="Center" Height="62" Width="239" Margin="0,194,0,194"></Label>
+
+        <ListView  x:Name="questionList" Margin="24,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="468">
+            <ListView.View>
+                <GridView>
+
+
+                    <GridViewColumn Header="Enoncé">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Width="70" Height="30" Text="{Binding Sentence}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Mauvaise réponse">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding WrongAnswer}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Bonne réponse">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding ValidAnswer}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="enregistrer" Margin="0" VerticalAlignment="Center"  />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Page>
