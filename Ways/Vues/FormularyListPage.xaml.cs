@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Ways.Classes;
 
 namespace Ways.Vues
 {
@@ -18,9 +19,28 @@ namespace Ways.Vues
     /// </summary>
     public partial class FormularyListPage : Page
     {
-        public FormularyListPage()
+
+
+    public FormularyListPage()
         {
+
             InitializeComponent();
+            formularyList.ItemsSource = getFormularies();
+            List<Question> items = new List<Question>();
+
+
+    }
+
+        private void createFormulary(object sender, RoutedEventArgs e)
+        {
+            string formularyName = formularyNameInput.Text;
+            Formulary formulary = new Formulary(formularyName);
         }
+
+        private void getFormularies()
+        {
+
+        }
+
     }
 }

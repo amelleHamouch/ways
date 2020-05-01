@@ -9,7 +9,33 @@
       Title="FormularyListPage">
 
     <Grid>
-        <Label Content="FormularyList" Foreground="#ff7f50" FontSize="30" HorizontalAlignment="Center" Height="62" Width="104"></Label>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListView  x:Name="formularyList" Margin="0,50,0,0" Grid.Row="0" Grid.RowSpan="4" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id du Questionnaire" Width="220" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="Nom du Questionnaire" Width="220" DisplayMemberBinding="{Binding Montant}"/>
+                    <GridViewColumn Header="Action" Width="120" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Margin="0,10,0,0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="formularyNameInput" Width="180" />
+            <Button x:Name="FormularyCreate" Content="Nouveau Formulaire" HorizontalAlignment="Right" VerticalAlignment="Top" Click="createFormulary" Margin="20,0,0,0"/>
+        </StackPanel>
+
 
     </Grid>
 </Page>
