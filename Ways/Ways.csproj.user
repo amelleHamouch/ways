@@ -27,6 +27,9 @@
     <Compile Update="Vues\QuizzQuestions.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Vues\UserHomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Vues\UserList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -57,6 +60,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\QuizzQuestions.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\UserHomePage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\UserList.xaml">

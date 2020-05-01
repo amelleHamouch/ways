@@ -16,7 +16,7 @@
         </StackPanel>
         <Image x:Name="waysLogo" HorizontalAlignment="Left" Height="81"  VerticalAlignment="Top" Width="299" Source="C:\Users\ahamouch\Ways\Ways\asset\waysLogo.JPG"/>
 
-        <Frame x:Name="Main" NavigationUIVisibility="Hidden"></Frame>
+        <Frame x:Name="Main" NavigationUIVisibility="Hidden" ></Frame>
 
     </Grid>
 </Window>

@@ -31,7 +31,7 @@ namespace Ways.Vues
         {
 
             User admin = new User(adminLogin.Text, adminPassBox.Password);
-            Boolean result = admin.adminConnect(admin);
+            Boolean result = admin.AdminConnect(admin);
 
 
                 if (result == true)

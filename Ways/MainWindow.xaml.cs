@@ -16,6 +16,6 @@ namespace Ways
             Main.Content = new WaysHomePage();
         }
 
-       
+
     }
 }

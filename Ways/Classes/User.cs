@@ -31,7 +31,7 @@ namespace Ways.Classes
         {
             
         }
-        public bool adminConnect(User admin) {
+        public bool AdminConnect(User admin) {
 
 
 
@@ -67,10 +67,41 @@ namespace Ways.Classes
             }
             catch (Exception ex)
             {
-                Console.WriteLine("LOUPé");
+
+                Console.WriteLine( ex.Message);
                 return false;
             }
           
+        }
+        public bool CreateUser(string login)
+        {
+
+            MySqlConnection sqlCon = Configurations.connection;
+
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                    sqlCon.Open();
+                String query = "INSERT INTO user (login, isAdmin) VALUES (login=@Username, isAdmin=@isAdmin) ";
+                    
+                    
+                MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@Username", login);
+                sqlCmd.Parameters.AddWithValue("@isAdmin", 0);
+
+                int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("LOUPé");
+                return false;
+            }
+
+
+
+
         }
 
 
