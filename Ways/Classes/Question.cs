@@ -31,12 +31,52 @@ namespace Ways.Classes
         public Question()
         {
         }
+
+        public void addQuestion(Question newQuestion)
+        {
+            MySqlConnection sqlCon = Configurations.connection;
+
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
+            String query = "INSERT INTO question (`sentence`,`validAnswer`,`wrongAswer`,`idForm`) VALUES ( @sentence, @validAnswer @wrongAswer,@idForm );";
+            MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+
+            sqlCmd.Parameters.Add(new MySqlParameter("@sentence", newQuestion.Sentence));
+            sqlCmd.Parameters.Add(new MySqlParameter("@validAnswer", newQuestion.ValidAnswer));
+            sqlCmd.Parameters.Add(new MySqlParameter("@wrongAswer", newQuestion.WrongAnswer));
+            sqlCmd.Parameters.Add(new MySqlParameter("@idQuestion", newQuestion.Id));
+            sqlCmd.Parameters.Add(new MySqlParameter("@idQuestion", newQuestion.IdForm));
+
+
+
+
+            sqlCmd.CommandType = CommandType.Text;
+            sqlCon.Close();
+        }
+        public void updateQuestion(Question updatedQuestion)
+        {
+            MySqlConnection sqlCon = Configurations.connection;
+
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
+            String query = "UPDATE question SET content = @sentence, validAnswer = @validAnswer , wrongAnswer = @wrongAswer,WHERE idQuestion = @idQuestion ; ";
+            MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+            sqlCmd.Parameters.Add(new MySqlParameter("@sentence", updatedQuestion.Sentence));
+            sqlCmd.Parameters.Add(new MySqlParameter("@validAnswer", updatedQuestion.ValidAnswer));
+            sqlCmd.Parameters.Add(new MySqlParameter("@wrongAswer", updatedQuestion.WrongAnswer));
+            sqlCmd.Parameters.Add(new MySqlParameter("@idQuestion", updatedQuestion.Id));
+
+
+
+            sqlCmd.CommandType = CommandType.Text;
+            sqlCon.Close();
+        }
+
         public List<Question> getQuestionsByFormularyId( int idForm)
         {
 
             List<Question> result = new List<Question>();
             MySqlConnection sqlCon = Configurations.connection;
-
 
             if (sqlCon.State == ConnectionState.Closed)
                 sqlCon.Open();
@@ -66,5 +106,7 @@ namespace Ways.Classes
             sqlCon.Close();
             return result;
         }
+
     }
+
 }

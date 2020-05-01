@@ -53,10 +53,10 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn>
+                    <GridViewColumn Header="Modifier la question">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="enregistrer" Margin="0" VerticalAlignment="Center"  />
+                                <Button x:Name="modifyQuestionbtn"  Content="Modifier"  Margin="20" VerticalAlignment="Center" Click="saveModifiedQuestion"  />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
