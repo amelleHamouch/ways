@@ -60,7 +60,6 @@ namespace Ways.Classes
                 {
                     Console.WriteLine("LOUPé");
                     sqlCon.Close();
-
                     return false;
 
                 }

@@ -14,18 +14,13 @@ using System.Windows.Shapes;
 namespace Ways.Vues
 {
     /// <summary>
-    /// Logique d'interaction pour HomeAdminPage.xaml
+    /// Logique d'interaction pour FormularyListPage.xaml
     /// </summary>
-    public partial class HomeAdminPage : Page
+    public partial class FormularyListPage : Page
     {
-        public HomeAdminPage()
+        public FormularyListPage()
         {
             InitializeComponent();
-            quizzView.Content = new FormularyListPage();
-            emailingView.Content = new AdminEmailSettingsPage();
-            score.Content = new AdminScorePage();
-            questionView.Content = new QuizzQuestionsPage();
-
         }
     }
 }

@@ -8,16 +8,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Ways.Vues
 {
     /// <summary>
-    /// Logique d'interaction pour Quizz.xaml
+    /// Logique d'interaction pour QuizzQuestionsPage.xaml
     /// </summary>
-    public partial class Quizz : Window
+    public partial class QuizzQuestionsPage : Page
     {
-        public Quizz()
+        public QuizzQuestionsPage()
         {
             InitializeComponent();
         }

@@ -8,16 +8,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Ways.Vues
 {
     /// <summary>
-    /// Logique d'interaction pour FormularyList.xaml
+    /// Logique d'interaction pour AdminEmailSettingsPage.xaml
     /// </summary>
-    public partial class FormularyList : Window
+    public partial class AdminEmailSettingsPage : Page
     {
-        public FormularyList()
+        public AdminEmailSettingsPage()
         {
             InitializeComponent();
         }

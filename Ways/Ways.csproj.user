@@ -9,28 +9,31 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Vues\AdminEmailSettings.xaml.cs">
+    <Compile Update="Vues\AdminEmailSettingsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Vues\AdminLoginPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Vues\FormularyList.xaml.cs">
+    <Compile Update="Vues\AdminScorePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vues\FormularyListPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Vues\HomeAdminPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Vues\Quizz.xaml.cs">
+    <Compile Update="Vues\QuizzPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Vues\QuizzQuestions.xaml.cs">
+    <Compile Update="Vues\QuizzQuestionsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Vues\UserHomePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Vues\UserList.xaml.cs">
+    <Compile Update="Vues\UserListPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Vues\UserLoginPage.xaml.cs">
@@ -44,28 +47,31 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Vues\AdminEmailSettings.xaml">
+    <Page Update="Vues\AdminEmailSettingsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\AdminLoginPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Vues\FormularyList.xaml">
+    <Page Update="Vues\AdminScorePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\FormularyListPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\HomeAdminPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Vues\Quizz.xaml">
+    <Page Update="Vues\QuizzPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Vues\QuizzQuestions.xaml">
+    <Page Update="Vues\QuizzQuestionsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\UserHomePage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Vues\UserList.xaml">
+    <Page Update="Vues\UserListPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\UserLoginPage.xaml">

@@ -8,16 +8,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Ways.Vues
 {
     /// <summary>
-    /// Logique d'interaction pour UserList.xaml
+    /// Logique d'interaction pour UserListPage.xaml
     /// </summary>
-    public partial class UserList : Window
+    public partial class UserListPage : Page
     {
-        public UserList()
+        public UserListPage()
         {
             InitializeComponent();
         }
