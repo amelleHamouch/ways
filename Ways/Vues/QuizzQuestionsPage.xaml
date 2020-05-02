@@ -35,25 +35,32 @@
                     <GridViewColumn Header="Enoncé">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Width="70" Height="30" Text="{Binding Sentence}"/>
+                                <TextBox Width="70" Height="30" Name="sentenceTxt"  Text="{Binding Sentence, UpdateSourceTrigger=LostFocus}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="Mauvaise réponse">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Text="{Binding WrongAnswer}"/>
+                                <TextBox x:Name="wrongAnswerTxt"   Text="{Binding WrongAnswer , UpdateSourceTrigger=LostFocus}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="Bonne réponse">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Text="{Binding ValidAnswer}"/>
+                                <TextBox x:Name="validAnswerTxt"   Text="{Binding ValidAnswer , UpdateSourceTrigger=LostFocus}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Modifier la question">
+                    <GridViewColumn Header="Points">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox x:Name="pointsTxt" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Modifier la question" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button x:Name="modifyQuestionbtn"  Content="Modifier"  Margin="20" VerticalAlignment="Center" Click="saveModifiedQuestion"  />
@@ -63,6 +70,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Center" Grid.Row="5" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="780" Height="52"/>
 
     </Grid>
 </Page>

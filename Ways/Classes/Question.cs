@@ -32,7 +32,7 @@ namespace Ways.Classes
         {
         }
 
-        public void addQuestion(Question newQuestion)
+        public bool addQuestion(Question newQuestion)
         {
             MySqlConnection sqlCon = Configurations.connection;
 
@@ -51,9 +51,12 @@ namespace Ways.Classes
 
 
             sqlCmd.CommandType = CommandType.Text;
+             Id = (int)sqlCmd.ExecuteScalar();
             sqlCon.Close();
+
+            return Id > 0;
         }
-        public void updateQuestion(Question updatedQuestion)
+        public bool updateQuestion(Question updatedQuestion)
         {
             MySqlConnection sqlCon = Configurations.connection;
 
@@ -69,7 +72,10 @@ namespace Ways.Classes
 
 
             sqlCmd.CommandType = CommandType.Text;
+            Id = (int)sqlCmd.ExecuteScalar();
             sqlCon.Close();
+
+            return Id > 0;
         }
 
         public List<Question> getQuestionsByFormularyId( int idForm)
