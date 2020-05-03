@@ -49,7 +49,7 @@
                     <GridViewColumn Header="Bonne réponse">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox x:Name="validAnswerTxt"   Text="{Binding ValidAnswer , UpdateSourceTrigger=LostFocus}"/>
+                                <TextBox x:Name="validAnswerTxt"   Text="{Binding ValidAnswer , UpdateSourceTrigger=LostFocus }"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
