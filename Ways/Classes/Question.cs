@@ -56,26 +56,26 @@ namespace Ways.Classes
 
             return Id > 0;
         }
-        public bool updateQuestion(Question updatedQuestion)
+        public void updateQuestion(Question updatedQuestion)
         {
             MySqlConnection sqlCon = Configurations.connection;
 
             if (sqlCon.State == ConnectionState.Closed)
                 sqlCon.Open();
-            String query = "UPDATE question SET content = @sentence, validAnswer = @validAnswer , wrongAnswer = @wrongAswer,WHERE idQuestion = @idQuestion ; ";
+            String query = "UPDATE question SET content = @sentence, validAnswer = @validAnswer , wrongAnswer = @wrongAnswer WHERE idQuestion = @idQuestion ; ";
             MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
             sqlCmd.Parameters.Add(new MySqlParameter("@sentence", updatedQuestion.Sentence));
             sqlCmd.Parameters.Add(new MySqlParameter("@validAnswer", updatedQuestion.ValidAnswer));
-            sqlCmd.Parameters.Add(new MySqlParameter("@wrongAswer", updatedQuestion.WrongAnswer));
+            sqlCmd.Parameters.Add(new MySqlParameter("@wrongAnswer", updatedQuestion.WrongAnswer));
             sqlCmd.Parameters.Add(new MySqlParameter("@idQuestion", updatedQuestion.Id));
 
 
 
             sqlCmd.CommandType = CommandType.Text;
-            Id = (int)sqlCmd.ExecuteScalar();
+            sqlCmd.ExecuteNonQuery();
             sqlCon.Close();
 
-            return Id > 0;
+            
         }
 
         public List<Question> getQuestionsByFormularyId( int idForm)

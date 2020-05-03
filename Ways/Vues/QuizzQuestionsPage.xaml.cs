@@ -23,24 +23,17 @@ namespace Ways.Vues
     /// </summary>
     public partial class QuizzQuestionsPage : Page
     {
-        int idForm;
-        private TextBox sentenceTxt ;
-        private TextBox wrongAnswerTxt;
-        private TextBox pointsTxt;
-        private TextBox validAnswerTxt;
-
+        int IdForm;
+      
 
         public QuizzQuestionsPage(string id)
         {
             InitializeComponent();
-            this.idForm = Int32.Parse(id);
+            this.IdForm = Int32.Parse(id);
             List<Question> result = getQuestions();
             questionList.ItemsSource = result;
-            this.DataContext = result;
-            sentenceTxt = new TextBox();
-            wrongAnswerTxt = new TextBox();
-            pointsTxt = new TextBox();
-            validAnswerTxt = new TextBox();
+            DataContext = result;
+
 
 
         }
@@ -56,7 +49,7 @@ namespace Ways.Vues
             Question question = new Question();
            
             List<Question> result = new List<Question>();
-            result = question.getQuestionsByFormularyId(idForm);
+            result = question.getQuestionsByFormularyId(IdForm);
             
             return result;
 
@@ -67,35 +60,40 @@ namespace Ways.Vues
             infoTextBlock.Text = "";
             bool success = true;
 
-            BindingExpression binding = sentenceTxt.GetBindingExpression(TextBox.TextProperty);
-            binding.UpdateSource();
-             binding = sentenceTxt.GetBindingExpression(TextBox.TextProperty);
-             binding.UpdateSource();
-             binding = validAnswerTxt.GetBindingExpression(TextBox.TextProperty);
-            binding.UpdateSource();
-            binding = wrongAnswerTxt.GetBindingExpression(TextBox.TextProperty);
-            binding.UpdateSource();
+
             //   null pointer ici 
-            Question question = new Question(sentenceTxt.Text.ToString(), validAnswerTxt.Text.ToString(), wrongAnswerTxt.Text.ToString(), idForm);
-           
+            //    Question question = new Question(sentenceTxt.Text.ToString(), validAnswerTxt.Text.ToString(), wrongAnswerTxt.Text,idForm);
+            Question question = new Question();
 
-            //pointsTxt
+             //pointsTxt
 
-            success = question.updateQuestion(question);
+        //     success = question.updateQuestion(question);
             if (!success)
             {
                 infoTextBlock.Text += "Echec : Une erreur est survenue lors de la modification\n";
                 return;
             }
             else {
-                QuizzQuestionsPage page = new QuizzQuestionsPage(idForm.ToString());
+                QuizzQuestionsPage page = new QuizzQuestionsPage(IdForm.ToString());
                 NavigationService.Navigate(page);
             }
            
         }
-        private void textChangedEventHandler(object sender, TextChangedEventArgs args)
+        private void displayModification(object sender, RoutedEventArgs e)
         {
            
-        } 
+            string idquestionToModify = (((Button)sender).Tag).ToString();
+            int questionId = Int32.Parse(idquestionToModify);
+
+            ModifyQuestionWindow popup = new ModifyQuestionWindow(questionId, IdForm);
+            popup.ShowDialog();
+        }
+
+        private void SelectCurrentItem(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            ListViewItem item = (ListViewItem)sender;
+            item.IsSelected = true;
+
+        }
     }
 }

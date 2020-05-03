@@ -6,9 +6,9 @@
       xmlns:local="clr-namespace:Ways.Vues"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="QuizzQuestionsPage">
+      Title="QuizzQuestionsPage" >
 
-    <Grid Width="800" Height="500">
+    <Grid  >
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -25,49 +25,24 @@
 
 
 
-        <Label Content="Liste Questions" Foreground="#ff7f50" FontSize="30" HorizontalAlignment="Center" Height="62" Width="239" Margin="0,194,0,194"></Label>
 
-        <ListView  x:Name="questionList" Margin="24,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="468">
+        <ListView  x:Name="questionList"  Margin="0,50,0,0" Grid.Row="0" Grid.RowSpan="4" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20" Background="#005C75" Width="800">
             <ListView.View>
-                <GridView>
+                <GridView >
 
-
-                    <GridViewColumn Header="Enoncé">
+                    <GridViewColumn Header="Enoncé" Width="Auto " DisplayMemberBinding="{Binding Sentence}" />
+                    <GridViewColumn  Header="Mauvaise réponse" Width="Auto" DisplayMemberBinding="{Binding WrongAnswer }"/>
+                    <GridViewColumn Header="Bonne réponse" Width="Auto" DisplayMemberBinding="{Binding ValidAnswer}"/>
+                    <GridViewColumn Header="Points"/>
+                    <GridViewColumn Header="Modifier la question" Width="180" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Width="70" Height="30" Name="sentenceTxt"  Text="{Binding Sentence, UpdateSourceTrigger=LostFocus}"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Mauvaise réponse">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox x:Name="wrongAnswerTxt"   Text="{Binding WrongAnswer , UpdateSourceTrigger=LostFocus}"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Bonne réponse">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox x:Name="validAnswerTxt"   Text="{Binding ValidAnswer , UpdateSourceTrigger=LostFocus }"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Points">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox x:Name="pointsTxt" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Modifier la question" >
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button x:Name="modifyQuestionbtn"  Content="Modifier"  Margin="20" VerticalAlignment="Center" Click="saveModifiedQuestion"  />
+                                <Button Tag="{Binding Id}" Content="Modifier"  Margin="20" VerticalAlignment="Center" Click="displayModification"  />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                 </GridView>
+                
             </ListView.View>
         </ListView>
         <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Center" Grid.Row="5" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="780" Height="52"/>

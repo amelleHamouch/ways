@@ -20,11 +20,12 @@ namespace Ways.Vues
     {
         public HomeAdminPage()
         {
+           
             InitializeComponent();
+
             quizzView.Content = new FormularyListPage();
             emailingView.Content = new AdminEmailSettingsPage();
             score.Content = new AdminScorePage();
-            questionView.Content = new QuizzQuestionsPage();
 
         }
     }
