@@ -11,7 +11,8 @@
     <Grid  >
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="127*"></ColumnDefinition>
+            <ColumnDefinition Width="473*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -25,26 +26,31 @@
 
 
 
-        <DockPanel  Grid.Row="0" Background="AliceBlue" Width="auto">
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Stretch" >
-                <Label Content="NomFormulaire"></Label>
-                <TextBox x:Name="NomFormulaire" Width="252" Height="38" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+        <DockPanel Background="AliceBlue" Width="auto" Grid.ColumnSpan="2" Margin="0,64,0,64" Grid.RowSpan="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <StackPanel  Grid.Column="2" Width="116" Margin="0,0,0,0" >
+                <Label Content="NomFormulaire" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                <TextBox x:Name="NomFormulaire" Width="252" Height="38" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="25,0,0,0"></TextBox>
             </StackPanel>
-            <StackPanel>
-                <Label Content="typeFormulaire"></Label>
-                <TextBox x:Name="typeFormulaire" Width="226" Height="38"></TextBox>
+            <StackPanel Grid.Column="3" Margin="5,0,0,0">
+                <Label Content="typeFormulaire" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Label>
+                <TextBox x:Name="typeFormulaire" Width="100" Height="38"></TextBox>
             </StackPanel>
-            <StackPanel>
-                <Label Content="Coefficient"></Label>
-                <TextBox x:Name="Coefficient" Height="38"/>
+            <StackPanel Grid.Column="4" Margin="5,0,0,0">
+                <Label Content="Coefficient" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Label>
+                <TextBox x:Name="Coefficient" Width="252" Height="38"/>
             </StackPanel>
-            <StackPanel>
-                <Label ></Label>
-
+            <StackPanel Grid.Column="5" Width="100" Margin="5,0,0,0">
+                <Label Content="Type"></Label>
+                <TextBox x:Name="TypeFormTxt" Height="38" Width="252" />
+            </StackPanel>
+            <StackPanel Grid.Column="6" Width="auto" Orientation="Horizontal">
+                <Button Content="Modify"  Height="38" Width="86" Click="ReturnBtn" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="15,0,0,0"/>
                 <Button Content="Retour"  Height="38" Width="86" Click="ReturnBtn" />
+
             </StackPanel>
+
         </DockPanel>
-        <ListView  x:Name="questionList"  Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="10,55,0,0" Grid.RowSpan="6" Width="auto" Height="311"  >
+        <ListView  x:Name="questionList"  Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="10,32,0,0" Grid.RowSpan="5" Width="876" Height="296" Grid.ColumnSpan="2"  >
             <ListView.View>
                 <GridView >
 
@@ -64,7 +70,7 @@
             </ListView.View>
         </ListView>
 
-        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Center" Grid.Row="5" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="780" Height="52"/>
+        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Grid.Row="5" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="780" Height="52" Grid.Column="1" Margin="129,0,0,0"/>
 
     </Grid>
 </Page>

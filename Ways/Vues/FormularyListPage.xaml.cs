@@ -30,7 +30,6 @@ namespace Ways.Vues
             formularyList.ItemsSource = getFormularies();
             List<Question> items = new List<Question>();
 
-
     }
 
         private void createFormulary(object sender, RoutedEventArgs e)
@@ -82,7 +81,9 @@ namespace Ways.Vues
             return result;
         }
 
+        private void formularyList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
-
+        }
     }
 }
