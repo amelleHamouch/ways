@@ -71,7 +71,6 @@ namespace Ways.Vues
                 Formulary form = new Formulary();
 
                 {
-
                     form.IdFormulary = reader.GetInt32(0);
                     form.Name = reader.GetString(1);
 

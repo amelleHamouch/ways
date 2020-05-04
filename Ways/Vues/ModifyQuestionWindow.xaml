@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Ways.Vues"
         mc:Ignorable="d"
         Title="ModifyQuestionWindow" Height="395" Width="670"  WindowStartupLocation="CenterScreen">
-    <Border Background="#c9e9f6" CornerRadius="20" Height="auto" Width="auto" >
-        <Grid Margin="15">
+    <Border  Background="#c9e9f6" CornerRadius="20"  Height="auto" Width="auto" >
+        <Grid Margin="-30,0,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
@@ -26,13 +26,13 @@
 
 
             <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Label x:Name="announce" HorizontalAlignment="Center" Content="MODIFICATION"></Label>
+                <Label x:Name="announce" HorizontalAlignment="Center" Content="MODIFICATION" Foreground="#ff7f50" FontSize="30"  Height="62"></Label>
 
             </StackPanel>
 
             <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Label  Content="Intitulé" HorizontalAlignment="Center" ></Label>
-                <TextBox Name="sentenceBox"  MinWidth="250" HorizontalAlignment="Left"></TextBox>
+                <Label  Content="Intitulé" HorizontalAlignment="Center" Foreground="#005C75"></Label>
+                <TextBox Name="sentenceBox"  Background="#005C75" Foreground="White" FontSize="20" MinWidth="250" HorizontalAlignment="Left"></TextBox>
                 <Separator></Separator>
 
             </StackPanel>
@@ -40,25 +40,25 @@
 
             <StackPanel  Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center">
 
-                <Label  Grid.Column="1" Grid.Row="4" Content="Bonne réponse" HorizontalAlignment="Center"></Label>
-                <TextBox Name="goodAnswerBox" MinWidth="250"></TextBox>
+                <Label  Grid.Column="1" Grid.Row="4" Foreground="#005C75" Content="Bonne réponse" HorizontalAlignment="Center"></Label>
+                <TextBox Name="goodAnswerBox" MinWidth="250" Background="#005C75" Foreground="White" FontSize="20"></TextBox>
             </StackPanel>
             <Separator></Separator>
 
             <StackPanel Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center">
-                <Label Name="wrongAnswer"  Content="Mauvaise Réponse" HorizontalAlignment="Center"></Label>
-                <TextBox x:Name="wrongAnswerBox" MinWidth="250"  />
+                <Label Name="wrongAnswer"  Foreground="#005C75" Content="Mauvaise Réponse" HorizontalAlignment="Center"></Label>
+                <TextBox x:Name="wrongAnswerBox" MinWidth="250"  Background="#005C75" Foreground="White" FontSize="20"/>
             </StackPanel  >
             <Separator></Separator>
 
 
             <StackPanel Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" Margin="0,53,0,-52">
-                <Label Name="points"  Content="Points" HorizontalAlignment="Center"></Label>
-                <TextBox x:Name="pointsBox" MinWidth="250"  />
+                <Label Name="points" Foreground="#005C75" Content="Points" HorizontalAlignment="Center"></Label>
+                <TextBox x:Name="pointsBox" MinWidth="250"  Background="#005C75" Foreground="White" FontSize="20"/>
             </StackPanel>
             <WrapPanel Grid.Row="4"  Grid.Column="1" HorizontalAlignment="Center" Margin="0,132,0,-117">
-                <Button IsDefault="True" x:Name="btnDialogOk1" Click="btnDialogOk_Click" MinWidth="60" Margin="0,0,10,0" Content="_Ok"/>
-                <Button IsCancel="True" MinWidth="60" Content="_Cancel" Click="Cancel" />
+                <Button IsDefault="True" x:Name="btnDialogOk1" Click="btnDialogOk_Click" MinWidth="60" Margin="0,0,10,0" Foreground="white" FontSize="20" Background="#ff7f50"  Content="_Ok"/>
+                <Button IsCancel="True" MinWidth="60" Content="Annuler" Click="Cancel" Foreground="white" FontSize="20" Background="#ff7f50" />
             </WrapPanel>
         </Grid>
     </Border>

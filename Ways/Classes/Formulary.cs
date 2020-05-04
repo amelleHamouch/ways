@@ -14,13 +14,19 @@ namespace Ways.Classes
         private int idFormulary;
         private string name;
         private List<Question> questionList;
+        private string type;
+        private int coef;
+
 
         public int IdFormulary { get => idFormulary; set => idFormulary = value; }
         public string Name { get => name; set => name = value; }
         internal List<Question> QuestionList { get => questionList; set => questionList = value; }
+        public string Type { get => type; set => type = value; }
+        public int Coef { get => coef; set => coef = value; }
 
         public Formulary(string name)
         {
+
             this.Name = name;
             this.idFormulary = initIntoDb();
             
@@ -56,8 +62,41 @@ namespace Ways.Classes
             return (Convert.ToInt32(sqlCmd.ExecuteScalar()));
      
         }
-      
 
+        public Formulary getFormById(int id)
+        {
+
+            Formulary result = new Formulary();
+            MySqlConnection sqlCon = Configurations.connection;
+
+
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
+            String query = "SELECT * FROM formulary WHERE idFormulary = @idFormulary;";
+            MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+            sqlCmd.Parameters.Add(new MySqlParameter("@idFormulary", id));
+
+            sqlCmd.CommandType = CommandType.Text;
+
+            int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+            MySqlDataReader reader = sqlCmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Formulary form = new Formulary();
+
+                {
+                    form.IdFormulary = reader.GetInt32(0);
+                    form.Name = reader.GetString(1);
+                    form.Coef = reader.GetInt32(2);
+                    form.Type = reader.GetString(3);
+
+                };
+                result= form;
+            }
+            reader.Close();
+            sqlCon.Close();
+            return result;
+        }
 
     }
 

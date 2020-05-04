@@ -20,27 +20,41 @@ namespace Ways.Vues
     {
         int Id;
         int IdFormulary;
+        String ValidAnswer;
+        Question question = new Question();
         public ModifyQuestionWindow(int idQuestion , int idFormulary )
         {
-             Id = idQuestion;
-            IdFormulary = idFormulary;
+         
             InitializeComponent();
+            Id = idQuestion;
+            IdFormulary = idFormulary;
+          
+            question = question.getQuestionsById(idQuestion);
+            wrongAnswerBox.Text = question.WrongAnswer;
+            goodAnswerBox.Text = question.ValidAnswer;
+            sentenceBox.Text = question.Sentence;
+            pointsBox.Text = question.Points.ToString();
+
+
+
         }
         private void btnDialogOk_Click(object sender, RoutedEventArgs e)
         {
-            Question question = new Question();
-            question.WrongAnswer = wrongAnswerBox.Text;
-            question.Id = Id;
-            question.IdForm = IdFormulary;
-            question.ValidAnswer = goodAnswerBox.Text;
-            question.Sentence = sentenceBox.Text;
+
+            if (wrongAnswerBox.Text != null)
+            {
+                question.WrongAnswer = wrongAnswerBox.Text;
+            }
+            if (goodAnswerBox.Text != null)
+            {
+                question.ValidAnswer = goodAnswerBox.Text;
+            }
+            if (sentenceBox.Text != null)
+            {
+                question.Sentence = sentenceBox.Text;
+            }
 
             question.updateQuestion(question);
-
-
-
-
-         
 
             Close();
 
@@ -49,6 +63,11 @@ namespace Ways.Vues
         private void Cancel(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void sentenceBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

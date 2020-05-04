@@ -24,7 +24,8 @@ namespace Ways.Vues
     public partial class QuizzQuestionsPage : Page
     {
         int IdForm;
-      
+        Formulary form = new Formulary();
+
 
         public QuizzQuestionsPage(string id)
         {
@@ -33,8 +34,11 @@ namespace Ways.Vues
             List<Question> result = getQuestions();
             questionList.ItemsSource = result;
             DataContext = result;
+            form = form.getFormById(IdForm);
 
-
+            typeFormulaire.Text = form.Type;
+            NomFormulaire.Text = form.Name;
+            Coefficient.Text = form.Coef.ToString();
 
         }
         public QuizzQuestionsPage()
@@ -49,7 +53,7 @@ namespace Ways.Vues
             Question question = new Question();
            
             List<Question> result = new List<Question>();
-            result = question.getQuestionsByFormularyId(IdForm);
+            result = question.getQuestionsByFormId(IdForm);
             
             return result;
 
@@ -81,19 +85,26 @@ namespace Ways.Vues
         }
         private void displayModification(object sender, RoutedEventArgs e)
         {
-           
             string idquestionToModify = (((Button)sender).Tag).ToString();
             int questionId = Int32.Parse(idquestionToModify);
-
             ModifyQuestionWindow popup = new ModifyQuestionWindow(questionId, IdForm);
             popup.ShowDialog();
+            QuizzQuestionsPage page = new QuizzQuestionsPage(IdForm.ToString());
+            NavigationService.Navigate(page);
         }
+
 
         private void SelectCurrentItem(object sender, KeyboardFocusChangedEventArgs e)
         {
             ListViewItem item = (ListViewItem)sender;
             item.IsSelected = true;
 
+        }
+
+        private void ReturnBtn(object sender, RoutedEventArgs e)
+        {
+            FormularyListPage page = new FormularyListPage();
+            NavigationService.Navigate(page);
         }
     }
 }

@@ -13,12 +13,15 @@ namespace Ways.Classes
         private string validAnswer;
         private string wrongAnswer;
         private int idForm;
+        private int points;
+
 
         public int Id { get => id; set => id = value; }
         public string ValidAnswer { get => validAnswer; set => validAnswer = value; }
         public string WrongAnswer { get => wrongAnswer; set => wrongAnswer = value; }
         public int IdForm { get => idForm; set => idForm = value; }
         public string Sentence { get => sentence; set => sentence = value; }
+        public int Points { get => points; set => points = value; }
 
         public Question(string sentence, string validAnswer, string wrongAnswer, int idForm)
         {
@@ -38,7 +41,7 @@ namespace Ways.Classes
 
             if (sqlCon.State == ConnectionState.Closed)
                 sqlCon.Open();
-            String query = "INSERT INTO question (`sentence`,`validAnswer`,`wrongAswer`,`idForm`) VALUES ( @sentence, @validAnswer @wrongAswer,@idForm );";
+            String query = "INSERT INTO question (`sentence`,`validAnswer`,`wrongAswer`,`idForm`,`points` ) VALUES ( @sentence, @validAnswer @wrongAswer,@idForm ,@points);";
             MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
 
             sqlCmd.Parameters.Add(new MySqlParameter("@sentence", newQuestion.Sentence));
@@ -46,6 +49,7 @@ namespace Ways.Classes
             sqlCmd.Parameters.Add(new MySqlParameter("@wrongAswer", newQuestion.WrongAnswer));
             sqlCmd.Parameters.Add(new MySqlParameter("@idQuestion", newQuestion.Id));
             sqlCmd.Parameters.Add(new MySqlParameter("@idQuestion", newQuestion.IdForm));
+            sqlCmd.Parameters.Add(new MySqlParameter("@points", newQuestion.Points));
 
 
 
@@ -68,6 +72,7 @@ namespace Ways.Classes
             sqlCmd.Parameters.Add(new MySqlParameter("@validAnswer", updatedQuestion.ValidAnswer));
             sqlCmd.Parameters.Add(new MySqlParameter("@wrongAnswer", updatedQuestion.WrongAnswer));
             sqlCmd.Parameters.Add(new MySqlParameter("@idQuestion", updatedQuestion.Id));
+            sqlCmd.Parameters.Add(new MySqlParameter("@points", updatedQuestion.Points));
 
 
 
@@ -78,17 +83,17 @@ namespace Ways.Classes
             
         }
 
-        public List<Question> getQuestionsByFormularyId( int idForm)
+        public Question getQuestionsById( int id)
         {
 
-            List<Question> result = new List<Question>();
+           Question result =new Question();
             MySqlConnection sqlCon = Configurations.connection;
 
             if (sqlCon.State == ConnectionState.Closed)
                 sqlCon.Open();
-            String query = "SELECT * FROM question where idForm = @idForm ;";
+            String query = "SELECT * FROM question where idQuestion = @id ;";
             MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
-            sqlCmd.Parameters.Add(new MySqlParameter("@idForm", idForm));
+            sqlCmd.Parameters.Add(new MySqlParameter("@id", id));
 
             sqlCmd.CommandType = CommandType.Text;
 
@@ -104,6 +109,45 @@ namespace Ways.Classes
                     question.Sentence = reader.GetString(1);
                     question.ValidAnswer = reader.GetString(2);
                     question.WrongAnswer = reader.GetString(3);
+                    question.Points = reader.GetInt32(4);
+
+
+                };
+                result = question;
+            }
+            reader.Close();
+            sqlCon.Close();
+
+            return result;
+        }
+
+
+
+        public List<Question> getQuestionsByFormId(int idform)
+        {
+
+            List<Question> result = new List<Question>();
+            MySqlConnection sqlCon = Configurations.connection;
+
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
+            String query = "SELECT * FROM question where idForm = @idForm ;";
+            MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+            sqlCmd.Parameters.Add(new MySqlParameter("@idForm", idform));
+
+            sqlCmd.CommandType = CommandType.Text;
+            int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+            MySqlDataReader reader = sqlCmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Question question = new Question();
+
+                {
+                    question.Id = reader.GetInt32(0);
+                    question.Sentence = reader.GetString(1);
+                    question.ValidAnswer = reader.GetString(2);
+                    question.WrongAnswer = reader.GetString(3);
+                    question.Points = reader.GetInt32(4);
 
                 };
                 result.Add(question);

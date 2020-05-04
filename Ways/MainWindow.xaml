@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ways"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="800">
-
+        Title="MainWindow" Height="720" Width="1080">
+    
     <Grid>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="80"  Background="#c9e9f6">
-            <Image x:Name="logoCesi" HorizontalAlignment="Right" Height="180" Margin="656,-55,0,0" VerticalAlignment="Top" Width="365" Source="C:\Users\ahamouch\Ways\Ways\asset\Cesi_Logo_ALTERNANCE_RVB (1).png"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="80"  Background="#c9e9f6" HorizontalAlignment="Left" Width="1080">
 
 
+            <Image x:Name="waysLogo"  Height="81"  VerticalAlignment="Top" Width="299" Source="C:\Users\ahamouch\Ways\Ways\asset\waysLogo.JPG" HorizontalAlignment="Left"/>
+            <Image x:Name="logoCesi"  Height="180"  VerticalAlignment="Center" Width="365" Source="C:\Users\ahamouch\Ways\Ways\asset\Cesi_Logo_ALTERNANCE_RVB (1).png" HorizontalAlignment="Right" Margin="430,0,0,0"/>
 
         </StackPanel>
-        <Image x:Name="waysLogo" HorizontalAlignment="Left" Height="81"  VerticalAlignment="Top" Width="299" Source="C:\Users\ahamouch\Ways\Ways\asset\waysLogo.JPG"/>
 
         <Frame x:Name="Main" NavigationUIVisibility="Hidden" ></Frame>
 
