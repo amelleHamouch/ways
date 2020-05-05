@@ -20,11 +20,9 @@ namespace Ways.Vues
     {
         public AdminScorePage()
         {
-            User user = new User();
-            UserList.ItemsSource = user.GetAllUsers();
-            List<User> items = new List<User>();
             InitializeComponent();
-
+            User user = new User();
+            listUsers.ItemsSource = user.GetAllUsers();
         }
 
 

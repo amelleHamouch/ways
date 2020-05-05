@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Ways.Classes;
 namespace Ways.Vues
 {
     /// <summary>
@@ -21,6 +21,17 @@ namespace Ways.Vues
         public AdminEmailSettingsPage()
         {
             InitializeComponent();
+            IDictionary<string, string> mailSettings = Mail.getMailSettings();
+            adminLogin.Text = mailSettings["mailAddress"];
+            adminPassBox.Password = mailSettings["mailPassword"];
+            sujetBox.Text = mailSettings["sujet"];
+            corpsBox.Text = mailSettings["corps"];
+            
+        }
+
+        private void saveEmailSettings(object sender, RoutedEventArgs e)
+        {
+            Mail.saveMailSettings(adminLogin.Text, adminPassBox.Password, sujetBox.Text, corpsBox.Text );
         }
     }
 }

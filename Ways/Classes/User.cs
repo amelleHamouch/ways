@@ -121,7 +121,14 @@ namespace Ways.Classes
                 {
                     user.Id = reader.GetInt32(0);
                     user.login = reader.GetString(1);
-                    user.score = reader.GetInt32(2);
+                    try{
+                        user.score = reader.GetInt32(4);
+                    }
+                    catch
+                    {
+                        user.score = 0;
+                    }
+                    
                 };
                 result.Add(user);
             }
