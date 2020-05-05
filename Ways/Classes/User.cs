@@ -53,7 +53,6 @@ namespace Ways.Classes
                 {
                     Console.WriteLine("Réussi");
                     sqlCon.Close();
-
                     return true;
                 }
                 else
@@ -72,6 +71,7 @@ namespace Ways.Classes
             }
           
         }
+     
         public bool CreateUser(string login)
         {
 
@@ -98,12 +98,39 @@ namespace Ways.Classes
                 return false;
             }
 
-
-
-
         }
 
+        public List<User> GetAllUsers() { 
+        MySqlConnection sqlCon = Configurations.connection;
 
+            List<User> result = new List<User>();
+
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
+            String query = "SELECT * FROM user ;";
+            MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+            sqlCmd.Parameters.Add(new MySqlParameter("@idFormulary", id));
+
+            sqlCmd.CommandType = CommandType.Text;
+
+            MySqlDataReader reader = sqlCmd.ExecuteReader();
+            while (reader.Read())
+            {
+                User user = new User();
+
+                {
+                    user.Id = reader.GetInt32(0);
+                    user.login = reader.GetString(1);
+                    user.score = reader.GetInt32(2);
+                };
+                result.Add(user);
+            }
+            reader.Close();
+            sqlCon.Close();
+            return result;
+        
+          
+        }
     }
 
 }

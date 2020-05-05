@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Ways.Classes;
 namespace Ways.Vues
 {
     /// <summary>
@@ -20,7 +20,19 @@ namespace Ways.Vues
     {
         public AdminScorePage()
         {
+            User user = new User();
+            UserList.ItemsSource = user.GetAllUsers();
+            List<User> items = new List<User>();
             InitializeComponent();
+
+        }
+
+
+
+        private void deleteUserEntryy(object sender, RoutedEventArgs e)
+        {
+
         }
     }
+    
 }

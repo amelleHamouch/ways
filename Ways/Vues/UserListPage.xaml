@@ -19,6 +19,7 @@
         </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
+                
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -26,19 +27,19 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-
-        <ListView  x:Name="UserScore" Grid.ColumnSpan="4" Margin="0,0,49,0"  >
+        <ListView  x:Name="UserList" Grid.ColumnSpan="4" Margin="0,0,49,0" Grid.RowSpan="7"  Background="Blue">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Id" Width="100" DisplayMemberBinding="{Binding IdFormulary}" />
-                    <GridViewColumn Header="Pseudo" Width="300" DisplayMemberBinding="{Binding IdFormulary}"/>
-                    <GridViewColumn Header="Score" Width="300" DisplayMemberBinding="{Binding IdFormulary}"/>
+                    <GridViewColumn Header="Id" Width="100" DisplayMemberBinding="{Binding Id}" />
+                    
+                    <GridViewColumn Header="Pseudo" Width="300" DisplayMemberBinding="{Binding Login}"/>
+                    <GridViewColumn Header="Score" Width="300" DisplayMemberBinding="{Binding Score}"/>
 
 
                     <GridViewColumn Width="150" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Tag="{Binding IdUser}" Content="Supprimer" Margin="0" VerticalAlignment="Center" Click="deleteUserEntry"/>
+                                <Button Tag="{Binding IdUser}" Content="Supprimer" Margin="0" VerticalAlignment="Center" Click="deleteUserEntryy" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
