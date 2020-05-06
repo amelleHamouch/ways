@@ -19,10 +19,11 @@
             <RowDefinition Height="133*"/>
             <RowDefinition Height="571*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="100"  HorizontalAlignment="Center" Width="1080"  Background="#002C35">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="100"   Width="auto"  Background="#002C35">
 
-            <Image Source="/asset/logo_transparent_background.png" Width="164" Height="101" Grid.Row="0" HorizontalAlignment="Right"/>
-
+            <Button Name="btn5" Width="210" Height="100"   Grid.Row="0" Click="BackToWaysHome" Background="Transparent">
+                <Image Source="C:\Users\ahamouch\Ways\Ways\asset\logo_transparent_background.png"  RenderTransformOrigin="0.335,0.515"/>
+            </Button>
 
         </StackPanel>
 

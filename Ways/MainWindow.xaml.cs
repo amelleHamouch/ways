@@ -1,6 +1,6 @@
 ﻿
 using System.Windows;
-
+using System.Windows.Navigation;
 using Ways.Vues;
 
 namespace Ways
@@ -16,6 +16,9 @@ namespace Ways
             Main.Content = new WaysHomePage();
         }
 
-
+        private void BackToWaysHome(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new WaysHomePage();
+        }
     }
 }
