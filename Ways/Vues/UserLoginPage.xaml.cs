@@ -31,7 +31,8 @@ namespace Ways.Vues
 
                 User user = new User();
                 String login = userLogintxt.Text;
-                user.Id = user.CreateUser(login);
+                user.Login = login;
+                user.Id = user.CreateUser(user);
 
                 if (user.Id > 0)
                 {

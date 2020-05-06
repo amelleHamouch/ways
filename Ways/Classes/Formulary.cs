@@ -82,7 +82,6 @@ namespace Ways.Classes
 
             sqlCmd.CommandType = CommandType.Text;
 
-            int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
             MySqlDataReader reader = sqlCmd.ExecuteReader();
             while (reader.Read())
             {

@@ -72,23 +72,24 @@ namespace Ways.Classes
           
         }
      
-        public int CreateUser(string login)
+        public int CreateUser(User user)
         {
 
             MySqlConnection sqlCon = Configurations.connection;
-
+            
             
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
                 String query = "INSERT INTO user (login, isAdmin) VALUES (login=@Username, isAdmin=@isAdmin);SELECT LAST_INSERT_ID(); ";
-                    
-                    
+    
                 MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
-                sqlCmd.CommandType = CommandType.Text;
-                sqlCmd.Parameters.AddWithValue("@Username", login);
-                sqlCmd.Parameters.AddWithValue("@isAdmin", 0);
 
-                return (Convert.ToInt32(sqlCmd.ExecuteScalar()));
+                sqlCmd.CommandType = CommandType.Text;
+            sqlCmd.Parameters.AddWithValue("@Username", user.Login);
+
+            sqlCmd.Parameters.AddWithValue("@isAdmin", 0);
+            int result = Convert.ToInt32(sqlCmd.ExecuteScalar());
+            return result;
             }
 
         public List<User> GetAllUsers() { 
@@ -100,6 +101,7 @@ namespace Ways.Classes
                 sqlCon.Open();
             String query = "SELECT * FROM user ;";
             MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+
             sqlCmd.Parameters.Add(new MySqlParameter("@idFormulary", id));
 
             sqlCmd.CommandType = CommandType.Text;
