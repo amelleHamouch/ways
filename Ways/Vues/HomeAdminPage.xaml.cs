@@ -28,5 +28,10 @@ namespace Ways.Vues
             score.Content = new AdminScorePage();
 
         }
+
+        private void emailingView_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }

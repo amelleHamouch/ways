@@ -39,7 +39,7 @@ namespace Ways.Vues
             typeFormulaire.Text = form.Type;
             NomFormulaire.Text = form.Name;
             Coefficient.Text = form.Coef.ToString();
-            TypeFormTxt.Text = form.Type;
+           
         }
         public QuizzQuestionsPage()
         {
@@ -106,5 +106,7 @@ namespace Ways.Vues
             FormularyListPage page = new FormularyListPage();
             NavigationService.Navigate(page);
         }
+
+     
     }
 }

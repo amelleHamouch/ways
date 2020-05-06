@@ -8,11 +8,18 @@
       d:DesignHeight="450" d:DesignWidth="1800"
       Title="QuizzQuestionsPage" >
 
-    <Grid  >
+    <Grid Margin="49.5,0,0,0"  >
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="127*"></ColumnDefinition>
-            <ColumnDefinition Width="473*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+
+
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -26,39 +33,38 @@
 
 
 
-        <DockPanel Background="AliceBlue" Width="auto" Grid.ColumnSpan="2" Margin="0,64,0,64" Grid.RowSpan="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <StackPanel  Grid.Column="2" Width="116" Margin="0,0,0,0" >
-                <Label Content="NomFormulaire" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="NomFormulaire" Width="252" Height="38" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="25,0,0,0"></TextBox>
+        <DockPanel Background="#7F002C35"  Grid.ColumnSpan="5" Margin="0,64,0,64" Grid.RowSpan="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+
+            <StackPanel  Grid.Column="0"  Grid.RowSpan="2">
+                <Label Content="NomFormulaire" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></Label>
+                <TextBox x:Name="NomFormulaire" Height="38" Width="247" ></TextBox>
             </StackPanel>
-            <StackPanel Grid.Column="3" Margin="5,0,0,0">
-                <Label Content="typeFormulaire" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Label>
-                <TextBox x:Name="typeFormulaire" Width="100" Height="38"></TextBox>
+
+            <StackPanel Grid.Column="1"   Grid.ColumnSpan="1" Margin="5,0,0,0">
+                <Label Content="typeFormulaire" Foreground="White" HorizontalAlignment="Center" Width="170"/>
+                <TextBox x:Name="typeFormulaire" Height="38"></TextBox>
             </StackPanel>
-            <StackPanel Grid.Column="4" Margin="5,0,0,0">
-                <Label Content="Coefficient" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Label>
-                <TextBox x:Name="Coefficient" Width="252" Height="38"/>
+            <StackPanel Grid.Column="2" Margin="5,0,0,0">
+                <Label Content="Coefficient" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Label>
+                <TextBox x:Name="Coefficient" Height="36" />
             </StackPanel>
-            <StackPanel Grid.Column="5" Width="100" Margin="5,0,0,0">
-                <Label Content="Type"></Label>
-                <TextBox x:Name="TypeFormTxt" Height="38" Width="252" />
-            </StackPanel>
-            <StackPanel Grid.Column="6" Width="auto" Orientation="Horizontal">
-                <Button Content="Modify"  Height="38" Width="86" Click="ReturnBtn" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="15,0,0,0"/>
-                <Button Content="Retour"  Height="38" Width="86" Click="ReturnBtn" />
+
+            <StackPanel Grid.Column="4" Width="auto" Orientation="Horizontal">
+                <Button Content="Modify"  Height="43" Width="95" Click="ReturnBtn" VerticalAlignment="Bottom" Margin="15,0,0,0"/>
+                <Button Content="Retour"  Height="44" Width="96" Click="ReturnBtn" Margin="20,0,0,0" VerticalAlignment="Bottom" />
 
             </StackPanel>
 
         </DockPanel>
-        <ListView  x:Name="questionList"  Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="10,32,0,0" Grid.RowSpan="5" Width="876" Height="296" Grid.ColumnSpan="2"  >
+        <ListView  x:Name="questionList"  Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="10,32,0,0" Grid.RowSpan="5" Width="1740" Height="296" Grid.ColumnSpan="3" >
             <ListView.View>
                 <GridView >
 
-                    <GridViewColumn Header="Enoncé" Width="Auto " DisplayMemberBinding="{Binding Sentence}"/>
-                    <GridViewColumn  Header="Mauvaise réponse" Width="Auto" DisplayMemberBinding="{Binding WrongAnswer }"/>
-                    <GridViewColumn Header="Bonne réponse" Width="Auto"    DisplayMemberBinding="{Binding ValidAnswer}" />
+                    <GridViewColumn Header="Enoncé" Width="Auto " DisplayMemberBinding="{Binding Sentence}" />
+                    <GridViewColumn  Header="Mauvaise réponse"  DisplayMemberBinding="{Binding WrongAnswer }"/>
+                    <GridViewColumn Header="Bonne réponse"     DisplayMemberBinding="{Binding ValidAnswer}" />
                     <GridViewColumn Header="Points"  DisplayMemberBinding="{Binding Points}"/>
-                    <GridViewColumn Header="Modifier la question"  >
+                    <GridViewColumn Header="Modifier la question">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Tag="{Binding Id}" Content="Modifier"  Margin="20" VerticalAlignment="Center" Click="displayModification"  />
@@ -70,7 +76,7 @@
             </ListView.View>
         </ListView>
 
-        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Grid.Row="5" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="780" Height="52" Grid.Column="1" Margin="129,0,0,0"/>
+        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Grid.Row="5" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="1544" Height="192" Margin="32,0,0,0" Grid.ColumnSpan="3"/>
 
     </Grid>
 </Page>

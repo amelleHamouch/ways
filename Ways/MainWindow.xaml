@@ -6,17 +6,27 @@
         xmlns:local="clr-namespace:Ways"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1080">
-    
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+            <GradientStop Color="#21BEB0" Offset="0"/>
+            <GradientStop Color="#008F98" Offset="0.5"/>
+            <GradientStop Color="#206D83" Offset="1"/>
+
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="80"  Background="#c9e9f6" HorizontalAlignment="Left" Width="1080">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="133*"/>
+            <RowDefinition Height="571*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="100"  HorizontalAlignment="Center" Width="1080"  Background="#002C35">
 
+            <Image Source="/asset/logo_transparent_background.png" Width="164" Height="101" Grid.Row="0" HorizontalAlignment="Right"/>
 
-            <Image x:Name="waysLogo"  Height="81"  VerticalAlignment="Top" Width="299" Source="C:\Users\ahamouch\Ways\Ways\asset\waysLogo.JPG" HorizontalAlignment="Left"/>
-            <Image x:Name="logoCesi"  Height="180"  VerticalAlignment="Center" Width="365" Source="C:\Users\ahamouch\Ways\Ways\asset\Cesi_Logo_ALTERNANCE_RVB (1).png" HorizontalAlignment="Right" Margin="430,0,0,0"/>
 
         </StackPanel>
 
-        <Frame x:Name="Main" NavigationUIVisibility="Hidden" ></Frame>
+        <Frame x:Name="Main" NavigationUIVisibility="Hidden" Grid.RowSpan="2" />
 
     </Grid>
 </Window>
