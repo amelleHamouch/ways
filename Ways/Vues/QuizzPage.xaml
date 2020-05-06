@@ -6,9 +6,46 @@
       xmlns:local="clr-namespace:Ways.Vues"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      MaxWidth="800"
+      MaxHeight="450"
       Title="QuizzPage">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="50*"></RowDefinition>
+
+            <RowDefinition Height="40*"></RowDefinition>
+            <RowDefinition Height="40*"></RowDefinition>
+            <RowDefinition Height="20*"></RowDefinition>
+
+
+        </Grid.RowDefinitions>
+
+        <StackPanel  Grid.ColumnSpan="3" Grid.Row="0" VerticalAlignment="Center">
+            <Label Content="Quizz" Foreground="White" FontSize="28" HorizontalAlignment="Center" Height="92" VerticalAlignment="Center" ></Label>
+
+            <Separator></Separator>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Label x:Name="QuestionLabel" Content="Question here !" Foreground="#005C75" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"></Label>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="1">
+            <Button Grid.Column="1" x:Name="WrongAnswer" Content="Answer here !" Foreground="white" FontSize="22" Background="#ff7f50" Click="Answer" Margin="50,0,50,0" />
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="2">
+            <Button Grid.Column="2" x:Name="RightAnswer" Content="Answer here !" Foreground="white" FontSize="22" Background="#ff7f50" Click="Answer" Margin="50,0,50,0" />
+        </StackPanel>
+        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Center" Grid.Row="3" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Height="52"/>
+
+
     </Grid>
 </Page>

@@ -25,7 +25,7 @@ namespace Ways.Vues
         {
             InitializeComponent();
             user = user.getUserById(userId);
-            userNameWelcome.Content = "Bonjour" + user.Login;
+            userNameWelcome.Content = "Bonjour " + user.Login;
 
         }
         public UserHomePage()
@@ -33,12 +33,11 @@ namespace Ways.Vues
             
             InitializeComponent();
             
-
         }
 
         private void StartGame(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new QuizzPage(1));
         }
     }
 }

@@ -72,25 +72,23 @@ namespace Ways.Classes
           
         }
      
-        public int CreateUser(User user)
+        public int CreateUser(String username)
         {
 
             MySqlConnection sqlCon = Configurations.connection;
-            
-            
-                if (sqlCon.State == ConnectionState.Closed)
-                    sqlCon.Open();
-                String query = "INSERT INTO user (login, isAdmin) VALUES (login=@Username, isAdmin=@isAdmin);SELECT LAST_INSERT_ID(); ";
-    
-                MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
 
-                sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.Parameters.AddWithValue("@Username", user.Login);
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
+            String query = "INSERT INTO user (`login`,`isAdmin`) VALUES ( @login, 0);SELECT LAST_INSERT_ID();";
+            MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
 
-            sqlCmd.Parameters.AddWithValue("@isAdmin", 0);
-            int result = Convert.ToInt32(sqlCmd.ExecuteScalar());
-            return result;
-            }
+            sqlCmd.Parameters.Add(new MySqlParameter("@login", username));
+
+            sqlCmd.CommandType = CommandType.Text;
+            sqlCmd.ExecuteScalar();
+            sqlCon.Close();
+            return (int)sqlCmd.LastInsertedId;
+        }
 
         public List<User> GetAllUsers() { 
         MySqlConnection sqlCon = Configurations.connection;
@@ -113,13 +111,13 @@ namespace Ways.Classes
 
                 {
                     user.Id = reader.GetInt32(0);
-                    user.login = reader.GetString(1);
+                    user.Login = reader.GetString(1);
                     try{
-                        user.score = reader.GetInt32(4);
+                        user.Score = reader.GetInt32(4);
                     }
                     catch
                     {
-                        user.score = 0;
+                        user.Score = 0;
                     }
                     
                 };
@@ -153,13 +151,13 @@ namespace Ways.Classes
 
                 {
                     user.Id = reader.GetInt32(0);
-                    user.login = reader.GetString(1);
+                    user.Login = reader.GetString(1);
                     try{
-                        user.score = reader.GetInt32(4);
+                        user.Score = reader.GetInt32(4);
                     }
                     catch
                     {
-                        user.score = 0;
+                        user.Score = 0;
                     }
                     
                 };

@@ -27,12 +27,8 @@ namespace Ways.Vues
         private void SubmitUser(object sender, RoutedEventArgs e)
         {
             {
-                
-
                 User user = new User();
-                String login = userLogintxt.Text;
-                user.Login = login;
-                user.Id = user.CreateUser(user);
+                user.Id = user.CreateUser(userLogin.Text);
 
                 if (user.Id > 0)
                 {
