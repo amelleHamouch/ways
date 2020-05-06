@@ -72,16 +72,15 @@ namespace Ways.Classes
           
         }
      
-        public bool CreateUser(string login)
+        public int CreateUser(string login)
         {
 
             MySqlConnection sqlCon = Configurations.connection;
 
-            try
-            {
+            
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
-                String query = "INSERT INTO user (login, isAdmin) VALUES (login=@Username, isAdmin=@isAdmin) ";
+                String query = "INSERT INTO user (login, isAdmin) VALUES (login=@Username, isAdmin=@isAdmin);SELECT LAST_INSERT_ID(); ";
                     
                     
                 MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
@@ -89,16 +88,8 @@ namespace Ways.Classes
                 sqlCmd.Parameters.AddWithValue("@Username", login);
                 sqlCmd.Parameters.AddWithValue("@isAdmin", 0);
 
-                int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
-                return true;
+                return (Convert.ToInt32(sqlCmd.ExecuteScalar()));
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("LOUPé");
-                return false;
-            }
-
-        }
 
         public List<User> GetAllUsers() { 
         MySqlConnection sqlCon = Configurations.connection;
@@ -137,6 +128,46 @@ namespace Ways.Classes
             return result;
         
           
+        }
+        public User getUserById(int id)
+        {
+
+            User result = new User();
+            MySqlConnection sqlCon = Configurations.connection;
+
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
+            String query = "SELECT * FROM user where idUser = @id ;";
+            MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+            sqlCmd.Parameters.Add(new MySqlParameter("@id", id));
+
+            sqlCmd.CommandType = CommandType.Text;
+
+            int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+            MySqlDataReader reader = sqlCmd.ExecuteReader();
+            while (reader.Read())
+            {
+                User user = new User();
+
+                {
+                    user.Id = reader.GetInt32(0);
+                    user.login = reader.GetString(1);
+                    try{
+                        user.score = reader.GetInt32(4);
+                    }
+                    catch
+                    {
+                        user.score = 0;
+                    }
+                    
+                };
+
+                result = user;
+            }
+            reader.Close();
+            sqlCon.Close();
+
+            return result;
         }
     }
 

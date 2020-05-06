@@ -10,7 +10,46 @@
       Title="UserHomePage"  Height="450" Width="Auto" Background="Transparent">
     
 
-    <Grid>
-        
+     <Grid>
+        <Grid.ColumnDefinitions  >
+            <ColumnDefinition Width="10*"></ColumnDefinition>
+
+            <ColumnDefinition Width="80*" ></ColumnDefinition>
+            <ColumnDefinition Width="10*"></ColumnDefinition>
+
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+
+            <RowDefinition  Height="200"></RowDefinition>
+            <RowDefinition  Height="150"></RowDefinition>
+            <RowDefinition  Height="100"></RowDefinition>
+
+
+
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            
+            <Label x:Name="userNameWelcome"  Foreground="Yellow" FontSize="40" HorizontalAlignment="Center" Height="62" Width="354" FontFamily="Franklin Gothic Medium"></Label>
+
+
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Label Content="Bienvenu sur WAYS" Foreground="Yellow" FontSize="40" HorizontalAlignment="Center" Height="62" Width="354" FontFamily="Franklin Gothic Medium"></Label>
+            <Separator></Separator>
+
+            <Label Content="Le CESI t'accompagne dans tes choix d'orientation grâce à ce test d'orientation " Foreground="White" FontSize="20" HorizontalAlignment="Center" Height="62"  FontFamily="Franklin Gothic Medium" VerticalAlignment="Top"></Label>
+
+        </StackPanel>
+     
+
+
+        <Button x:Name="StartBtn" Content="Valider " Foreground="#005C75" FontSize="22"   Grid.Row="2" Grid.Column="1" Background="Yellow" Height="51" Width="132"  Margin="20,20,20,20" Click="StartGame"  />
+
+
     </Grid>
 </Page>

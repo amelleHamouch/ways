@@ -31,12 +31,12 @@ namespace Ways.Vues
 
                 User user = new User();
                 String login = userLogintxt.Text;
-                bool result =user.CreateUser(login);
+                user.Id = user.CreateUser(login);
 
-                if (result == true)
+                if (user.Id > 0)
                 {
                     Console.WriteLine("Réussi");
-                    this.NavigationService.Navigate(new UserHomePage());
+                    this.NavigationService.Navigate(new UserHomePage(user.Id));
                 }
                 else
                 {

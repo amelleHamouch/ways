@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Ways.Classes;
 
 namespace Ways.Vues
 {
@@ -18,9 +19,26 @@ namespace Ways.Vues
     /// </summary>
     public partial class UserHomePage : Page
     {
-        public UserHomePage()
+        User user = new User();
+
+        public UserHomePage(int userId)
         {
             InitializeComponent();
+            user = user.getUserById(userId);
+            userNameWelcome.Content = "Bonjour" + user.Login;
+
+        }
+        public UserHomePage()
+        {
+            
+            InitializeComponent();
+            
+
+        }
+
+        private void StartGame(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
