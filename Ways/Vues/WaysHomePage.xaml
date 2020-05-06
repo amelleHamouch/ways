@@ -10,12 +10,12 @@
 
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="auto" Width="auto">
-            <Button x:Name="AccessUserBtn" Content="Espace Candidat"  Background="#7F0DB082" Height="273" Foreground="White" FontSize="28" Width="264" Margin="50" Click="Button_UserAccess" MinWidth="100" Opacity="0.5">
+            <Button x:Name="AccessUserBtn" Content="Espace Candidat" Background="#002C35" Height="273" Foreground="Yellow" FontSize="28" Width="264" Margin="50" Click="Button_UserAccess" MinWidth="100" Opacity="0.5">
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
             </Button>
-            <Button x:Name="AccessAdminBtn" Content="Administrateur CESI" Height="273" Foreground="White" FontSize="28" Margin="50" MinWidth="264" Width="264" Click="Button_AdminAccess" Background="#7F0DB082" Opacity="0.5">
+            <Button x:Name="AccessAdminBtn" Content="Administrateur CESI" Height="273" Foreground="Yellow" FontSize="28" Margin="50" MinWidth="264" Width="264" Click="Button_AdminAccess" Background="#002C35" Opacity="0.5">
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>

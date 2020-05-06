@@ -7,7 +7,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using Ways.Classes;
+
 namespace Ways.Classes
+
 {
     class Formulary
     {
@@ -15,6 +17,7 @@ namespace Ways.Classes
         private string name;
         private List<Question> questionList;
         private string type;
+        private string description;
         private int coef;
 
 
@@ -23,6 +26,7 @@ namespace Ways.Classes
         internal List<Question> QuestionList { get => questionList; set => questionList = value; }
         public string Type { get => type; set => type = value; }
         public int Coef { get => coef; set => coef = value; }
+        public string Description { get => description; set => description = value; }
 
         public Formulary(string name)
         {
@@ -89,6 +93,8 @@ namespace Ways.Classes
                     form.Name = reader.GetString(1);
                     form.Coef = reader.GetInt32(2);
                     form.Type = reader.GetString(3);
+                    form.Description = reader.GetString(4);
+
 
                 };
                 result= form;
