@@ -23,15 +23,29 @@ namespace Ways.Vues
   
         int actualQuestion = 0;
         int score = 0;
+        int formId = 0;
+        int orientationScore;
 
         Formulary form = new Formulary();
+
+        public QuizzPage(int id, int playerScore)
+        {
+            InitializeComponent();
+            questionList = getQuestions(id);
+            form = form.getFormById(id);
+            formId = id;
+            actualQuestion = 0;
+            orientationScore = playerScore;
+            displayQuestion();
+        }
 
         public QuizzPage(int id)
         {
             InitializeComponent();
             questionList = getQuestions(id);
             form = form.getFormById(id);
-
+            formId = id;
+            actualQuestion = 0;
             displayQuestion();
         }
 
@@ -65,18 +79,22 @@ namespace Ways.Vues
             var answer = (e.Source as Button).Content.ToString();
             score += answer == questionList[actualQuestion].ValidAnswer ? 1 : -1;
             actualQuestion++;
-            if (actualQuestion > questionList.Count)
+            if (actualQuestion == questionList.Count)
             {
-                if(form.IdFormulary == 1)
+                if(formId == 1)
                 {
-                    //Vers page orientation
+                    this.NavigationService.Navigate(new UserOrientationPage(score));
                 }
                 else
                 {
-                    //Vers page emailing
+                    this.NavigationService.Navigate(new UserMailPage(orientationScore, score));
                 }
             }
-            displayQuestion();
+            else
+            {
+                displayQuestion();
+            }
+            
         }
     }
 }
