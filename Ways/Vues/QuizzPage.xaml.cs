@@ -56,6 +56,7 @@ namespace Ways.Vues
 
         private void displayQuestion()
         {
+           
             QuestionLabel.Content = questionList[actualQuestion].Sentence;
             var random = new Random();
             bool inverseQuestion = random.Next(2) == 1;

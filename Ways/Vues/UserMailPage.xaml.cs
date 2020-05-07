@@ -27,5 +27,10 @@ namespace Ways.Vues
         {
             InitializeComponent();
         }
+
+        private void sendAllEmails(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

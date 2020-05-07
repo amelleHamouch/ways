@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Ways.Vues"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="UserOrientationPage">
+      Title="UserOrientationPage"  Height="450" Width="Auto" Background="Transparent">
 
     <Grid>
         <Grid.ColumnDefinitions  >
@@ -20,8 +20,8 @@
         <Grid.RowDefinitions>
 
 
-            <RowDefinition  Height="200"></RowDefinition>
             <RowDefinition  Height="150"></RowDefinition>
+            <RowDefinition  Height="200"></RowDefinition>
             <RowDefinition  Height="100"></RowDefinition>
 
 
@@ -31,7 +31,7 @@
 
 
 
-        <StackPanel Grid.Row="1" Grid.Column="1">
+        <StackPanel Grid.Row="0" Grid.Column="1">
             <Label Content="Orientation" Foreground="Yellow" FontSize="40"  FontFamily="Franklin Gothic Medium" HorizontalAlignment="Center" ></Label>
             <Separator></Separator>
 
@@ -39,6 +39,11 @@
 
         </StackPanel>
 
+        <StackPanel Grid.Row="1" Grid.Column="1">
+
+            <TextBlock x:Name="Descriptiontxt"  Foreground="White" FontSize="20" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" FontFamily="Franklin Gothic Medium" VerticalAlignment="Top"></TextBlock>
+
+        </StackPanel>
 
 
         <Button Content="Recevoir mes résultats maintenant" Foreground="#005C75" FontSize="20"   Grid.Row="2" Grid.Column="1" Background="Yellow" Height="51"   Margin="20,20,20,20" Click="mailMe" HorizontalAlignment="Left"  />

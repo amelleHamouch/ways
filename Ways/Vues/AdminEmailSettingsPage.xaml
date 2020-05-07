@@ -54,6 +54,6 @@
             <TextBox   Name="corpsBox" Background="#005C75" Foreground="White" FontSize="20" ></TextBox>
          
         </StackPanel>
-        <Button x:Name="submit" Content="Valider " Grid.ColumnSpan="3"  Grid.Row="4" Grid.RowSpan="1" Foreground="white" FontSize="18" Background="#ff7f50"  Width="132" Click="saveEmailSettings"  />
+        <Button x:Name="submit" Content="Valider " Grid.ColumnSpan="3"  Grid.Row="4" Grid.RowSpan="1" Foreground="white" FontSize="18" Background="Yellow"  Width="132" Click="saveEmailSettings"  />
     </Grid>
 </Page>

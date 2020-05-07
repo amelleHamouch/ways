@@ -6,13 +6,14 @@
       xmlns:local="clr-namespace:Ways.Vues"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="UserMailPage">
+      Title="UserMailPage" Height="450" Width="Auto" Background="Transparent">
 
     <Grid>
         <Grid.ColumnDefinitions  >
             <ColumnDefinition Width="10*"></ColumnDefinition>
+            <ColumnDefinition Width="40*" ></ColumnDefinition>
 
-            <ColumnDefinition Width="80*" ></ColumnDefinition>
+            <ColumnDefinition Width="40*" ></ColumnDefinition>
             <ColumnDefinition Width="10*"></ColumnDefinition>
 
 
@@ -20,14 +21,18 @@
         <Grid.RowDefinitions>
 
 
-            <RowDefinition  Height="200"></RowDefinition>
             <RowDefinition  Height="150"></RowDefinition>
-            <RowDefinition  Height="100"></RowDefinition>
+            <RowDefinition  Height="80"></RowDefinition>
+            <RowDefinition  Height="75"></RowDefinition>
+            <RowDefinition  Height="75"></RowDefinition>
+            <RowDefinition  Height="75"></RowDefinition>
+
+
 
 
 
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="1">
+        <StackPanel Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
 
             <Label x:Name="userNameWelcome"  Foreground="Yellow" FontSize="40" HorizontalAlignment="Center" Height="62" Width="354" FontFamily="Franklin Gothic Medium"></Label>
 
@@ -36,13 +41,36 @@
 
 
 
-        <StackPanel Grid.Row="1" Grid.Column="1">
+        <StackPanel Grid.Row="0" Grid.Column="1"  Grid.ColumnSpan="2">
             <Label Content="Mail Page" Foreground="Yellow" FontSize="40" HorizontalAlignment="Center" Height="62"  FontFamily="Franklin Gothic Medium"></Label>
             <Separator></Separator>
+            <Label Content="Email Candidat" Foreground="White" FontSize="20"></Label>
+            <TextBox x:Name="UserMailTxt" Background="#005C75" Width="620" Height="23"></TextBox>
+        </StackPanel>
+        <TextBlock  Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" Text=" Renseignes ton email et reçois les résultats de tes tests d'orientation et de connaissance  et fais augmenter ton score en indiquant à tes proches ta participation à la journée porte ouverte du CESI  " FontSize="20" TextBlock.Foreground="White"  TextWrapping="WrapWithOverflow"></TextBlock>
 
-            
+
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Label Content="Email Bonus" Foreground="White" FontSize="20"></Label>
+            <TextBox Background="#005C75"  x:Name="txtBonus" Margin="0,0,5,0"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="2">
+            <Label Content="Email Bonus" Foreground="White" FontSize="20"></Label>
+            <TextBox x:Name="txtBonus1" Background="#005C75" HorizontalAlignment="Stretch" Margin="5,0,0,0"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <Label Content="Email Bonus" Foreground="White" FontSize="20"></Label>
+            <TextBox Background="#005C75" Margin="0,0,5,0"  x:Name="txtBonus2"></TextBox>
         </StackPanel>
 
 
+        <StackPanel Grid.Row="3" Grid.Column="2">
+            <Label Content="Email Bonus" Foreground="White" FontSize="20"></Label>
+            <TextBox  x:Name="txtBonus3" Background="#005C75" Margin="5,0,0,0"></TextBox>
+        </StackPanel>
+
+        <Button  x:Name="sendbtn" Grid.Column="2" Grid.Row="4" Content="ENVOYER" Background="Yellow" Foreground="#005C75" FontSize="20" Margin="69,22,106,0" Click="sendAllEmails"/>
     </Grid>
 </Page>
