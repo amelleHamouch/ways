@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 
 namespace Ways.Classes
@@ -51,6 +53,41 @@ namespace Ways.Classes
             sqlCon.Close();
 
             return mailSettings;
+        }
+
+        public static void sendMainMail(String emailAddress, string pseudoUser, string scoreUser, string orientationUser)
+        {
+
+            IDictionary<string, string> emailSettings = getMailSettings();
+            MailMessage message = new MailMessage();
+
+            message.From = new MailAddress(emailSettings["mailAddress"]);
+            message.To.Add(new MailAddress(emailAddress));
+
+            message.Subject = emailSettings["sujet"];
+            message.Subject.Replace("%pseudo%", pseudoUser);
+            message.Subject.Replace("%score%", scoreUser);
+            message.Subject.Replace("%orientation%", orientationUser);
+
+            message.Body = emailSettings["corps"];
+            message.Body.Replace("%pseudo%", pseudoUser);
+            message.Body.Replace("%score%", scoreUser);
+            message.Body.Replace("%orientation%", orientationUser);
+
+            SmtpClient client = new SmtpClient();
+            client.Credentials = new System.Net.NetworkCredential(emailSettings["mailAddress"], emailSettings["mailPassword"]);
+
+            client.Port = 587;
+            client.Host = "smtp.office365.com";
+            client.EnableSsl = true;
+            try
+            {
+                client.Send(message);
+            }
+            catch (Exception ex)
+            {
+               Console.WriteLine(ex.Message);
+            }
         }
     }
 }
