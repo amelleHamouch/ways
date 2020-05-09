@@ -129,7 +129,7 @@ namespace Ways.Classes
         
           
         }
-        public User getUserById(int id)
+        public static User getUserById(int id)
         {
 
             User result = new User();

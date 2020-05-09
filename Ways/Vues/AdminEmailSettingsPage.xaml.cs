@@ -22,16 +22,18 @@ namespace Ways.Vues
         {
             InitializeComponent();
             IDictionary<string, string> mailSettings = Mail.getMailSettings();
-            adminLogin.Text = mailSettings["mailAddress"];
-            adminPassBox.Password = mailSettings["mailPassword"];
-            sujetBox.Text = mailSettings["sujet"];
-            corpsBox.Text = mailSettings["corps"];
+            adminLogin.Text =           mailSettings["mailAddress"];
+            adminPassBox.Password =     mailSettings["mailPassword"];
+            sujetBox.Text =             mailSettings["sujet"];
+            corpsBox.Text =             mailSettings["corps"];
+            promoSujetBox.Text =        mailSettings["promoSujet"];
+            promoMailBox.Text =         mailSettings["promoMail"];
             
         }
 
         private void saveEmailSettings(object sender, RoutedEventArgs e)
         {
-            Mail.saveMailSettings(adminLogin.Text, adminPassBox.Password, sujetBox.Text, corpsBox.Text );
+            Mail.saveMailSettings(adminLogin.Text, adminPassBox.Password, sujetBox.Text, corpsBox.Text, promoSujetBox.Text, promoMailBox.Text);
         }
     }
 }

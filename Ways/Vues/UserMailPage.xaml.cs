@@ -21,20 +21,26 @@ namespace Ways.Vues
     /// </summary>
     public partial class UserMailPage : Page
     {
-        public UserMailPage(int orientation)
+        new User user = new User();
+        int scoreUser;
+        int userId;
+        string userOrientation;
+        public UserMailPage(string orientation, int score, int userId)
         {
             InitializeComponent();
-        }
-
-        public UserMailPage(int orientation, int score)
-        {
-            InitializeComponent();
+            user = User.getUserById(userId);
+            scoreUser = score;
+            userOrientation = orientation;
         }
 
         private void sendAllEmails(object sender, RoutedEventArgs e)
         {
-            Mail.sendMainMail("nicolas.pinhal@viacesi.fr");
-            //this.NavigationService.Navigate(new UserEndPage());
+            Mail.sendMainMail(UserMailTxt.Text, user.Login, scoreUser.ToString(), userOrientation);
+            if (emailBonus1.Text != "")Mail.sendPromoMail(emailBonus1.Text, user.Login, scoreUser.ToString(), userOrientation); 
+            if (emailBonus2.Text != "")Mail.sendPromoMail(emailBonus2.Text, user.Login, scoreUser.ToString(), userOrientation); 
+            if (emailBonus3.Text != "")Mail.sendPromoMail(emailBonus3.Text, user.Login, scoreUser.ToString(), userOrientation);
+            if (emailBonus4.Text != "")Mail.sendPromoMail(emailBonus4.Text, user.Login, scoreUser.ToString(), userOrientation);
+            this.NavigationService.Navigate(new UserEndPage());
 
         }
 

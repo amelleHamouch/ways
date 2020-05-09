@@ -18,10 +18,12 @@ namespace Ways.Vues
     /// </summary>
     public partial class UserOrientationPage : Page
     {
-        int playerScore; 
-        public UserOrientationPage(int score)
+        int playerScore;
+        int userId;
+        public UserOrientationPage(int score, int userId)
         {
             playerScore = score;
+            this.userId = userId;
             InitializeComponent();
             if(score < 2)
             {
@@ -43,12 +45,12 @@ namespace Ways.Vues
 
         private void mailMe(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new UserMailPage(playerScore));
+            this.NavigationService.Navigate(new UserMailPage(OrientationLabel.Content.ToString(), -1, userId));
         }
 
         private void StartGame(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new QuizzPage(2));
+            this.NavigationService.Navigate(new QuizzPage(2, userId));
         }
     }
 }

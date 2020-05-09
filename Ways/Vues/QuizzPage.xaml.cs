@@ -25,10 +25,10 @@ namespace Ways.Vues
         int score = 0;
         int formId = 0;
         int orientationScore;
-
+        int userId;
         Formulary form = new Formulary();
 
-        public QuizzPage(int id, int playerScore)
+        public QuizzPage(int id, int playerScore, int userId)
         {
             InitializeComponent();
             questionList = getQuestions(id);
@@ -36,16 +36,18 @@ namespace Ways.Vues
             formId = id;
             actualQuestion = 0;
             orientationScore = playerScore;
+            this.userId = userId;
             displayQuestion();
         }
 
-        public QuizzPage(int id)
+        public QuizzPage(int id, int userId)
         {
             InitializeComponent();
             questionList = getQuestions(id);
             form = form.getFormById(id);
             formId = id;
             actualQuestion = 0;
+            this.userId = userId;
             displayQuestion();
         }
 
@@ -84,11 +86,11 @@ namespace Ways.Vues
             {
                 if(formId == 1)
                 {
-                    this.NavigationService.Navigate(new UserOrientationPage(score));
+                    this.NavigationService.Navigate(new UserOrientationPage(score, this.userId));
                 }
                 else
                 {
-                    this.NavigationService.Navigate(new UserMailPage(orientationScore, score));
+                    this.NavigationService.Navigate(new UserMailPage(orientationScore.ToString(), score, this.userId));
                 }
             }
             else

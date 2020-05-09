@@ -52,23 +52,23 @@
 
         <StackPanel Grid.Row="2" Grid.Column="1">
             <Label Content="Email Bonus" Foreground="White" FontSize="20"></Label>
-            <TextBox Background="#005C75"  x:Name="txtBonus" Margin="0,0,5,0"></TextBox>
+            <TextBox Background="#005C75"  x:Name="emailBonus1" Margin="0,0,5,0"></TextBox>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="2">
             <Label Content="Email Bonus" Foreground="White" FontSize="20"></Label>
-            <TextBox x:Name="txtBonus1" Background="#005C75" HorizontalAlignment="Stretch" Margin="5,0,0,0"></TextBox>
+            <TextBox x:Name="emailBonus2" Background="#005C75" HorizontalAlignment="Stretch" Margin="5,0,0,0"></TextBox>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="1">
             <Label Content="Email Bonus" Foreground="White" FontSize="20"></Label>
-            <TextBox Background="#005C75" Margin="0,0,5,0"  x:Name="txtBonus2"></TextBox>
+            <TextBox Background="#005C75" Margin="0,0,5,0"  x:Name="emailBonus4"></TextBox>
         </StackPanel>
 
 
         <StackPanel Grid.Row="3" Grid.Column="2">
             <Label Content="Email Bonus" Foreground="White" FontSize="20"></Label>
-            <TextBox  x:Name="txtBonus3" Background="#005C75" Margin="5,0,0,0"></TextBox>
+            <TextBox  x:Name="emailBonus3" Background="#005C75" Margin="5,0,0,0"></TextBox>
         </StackPanel>
 
         <Button  x:Name="sendbtn" Grid.Column="2" Grid.Row="4" Content="ENVOYER" Background="Yellow" Foreground="#005C75" FontSize="20" Margin="69,22,106,0" Click="sendAllEmails"/>
