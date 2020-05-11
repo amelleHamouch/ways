@@ -62,8 +62,9 @@ namespace Ways.Classes
             MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
             sqlCmd.CommandType = System.Data.CommandType.Text;
             sqlCmd.Parameters.AddWithValue("@name", this.name);
+            int id = (Convert.ToInt32(sqlCmd.ExecuteScalar()));
+            return id;
 
-            return (Convert.ToInt32(sqlCmd.ExecuteScalar()));
      
         }
 

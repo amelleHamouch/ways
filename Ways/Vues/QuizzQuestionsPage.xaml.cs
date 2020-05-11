@@ -25,7 +25,7 @@ namespace Ways.Vues
     {
         int IdForm;
         Formulary form = new Formulary();
-
+        string id;
 
         public QuizzQuestionsPage(string id)
         {
@@ -35,10 +35,8 @@ namespace Ways.Vues
             questionList.ItemsSource = result;
             DataContext = result;
             form = form.getFormById(IdForm);
-
-            typeFormulaire.Text = form.Type;
-            NomFormulaire.Text = form.Name;
-            Coefficient.Text = form.Coef.ToString();
+            this.id = id;
+          
            
         }
         public QuizzQuestionsPage()
@@ -65,8 +63,6 @@ namespace Ways.Vues
             bool success = true;
 
 
-            //   null pointer ici 
-            //    Question question = new Question(sentenceTxt.Text.ToString(), validAnswerTxt.Text.ToString(), wrongAnswerTxt.Text,idForm);
             Question question = new Question();
 
              //pointsTxt
@@ -108,6 +104,20 @@ namespace Ways.Vues
             NavigationService.Navigate(page);
         }
 
-     
+        private void addQuestionToForm(object sender, RoutedEventArgs e)
+        {
+            Question question = new Question();
+          
+            bool success = question.addQuestion(question);
+            if(success)
+            {
+                QuizzQuestionsPage page = new QuizzQuestionsPage(id);
+                NavigationService.Navigate(page);
+            }
+            else
+            {
+                 MessageBox.Show("Veillez à renseigner tout les champs");
+            }
+}
     }
 }

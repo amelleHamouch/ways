@@ -26,15 +26,15 @@
 
 
             <TabItem Header="Quizz" Height="50" Width="80" FontSize="15"  Background="#FFFF8A43" >
-                <Frame x:Name="quizzView" NavigationUIVisibility="Hidden" Height="auto"></Frame>
+                <Frame x:Name="quizzView" BorderThickness="0" NavigationUIVisibility="Hidden" Height="auto"></Frame>
 
             </TabItem>
 
             <TabItem Header="Scores" Height="50" Width="80" FontSize="15" Background="#FFFF8A43">
-                <Frame x:Name="score" NavigationUIVisibility="Hidden" Height="auto" ></Frame>
+                <Frame x:Name="score" BorderThickness="0" NavigationUIVisibility="Hidden" Height="auto" ></Frame>
             </TabItem>
             <TabItem Header="Test" Height="50" Width="80" FontSize="15" Background="#FFFF8A43">
-                <Frame x:Name="Test" NavigationUIVisibility="Hidden" Height="auto" ></Frame>
+                <Frame x:Name="Test" BorderThickness="0" NavigationUIVisibility="Hidden" Height="auto" ></Frame>
             </TabItem>
 
         </TabControl>

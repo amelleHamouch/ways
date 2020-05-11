@@ -41,25 +41,26 @@ namespace Ways.Classes
 
             if (sqlCon.State == ConnectionState.Closed)
                 sqlCon.Open();
-            String query = "INSERT INTO question (`sentence`,`validAnswer`,`wrongAswer`,`idForm`,`points` ) VALUES ( @sentence, @validAnswer @wrongAswer,@idForm ,@points);";
+            String query = "INSERT INTO question (`content`,`validAnswer`,`wrongAnswer`,`idForm`,`points` ) VALUES ( @sentence, @validAnswer, @wrongAnswer,@idForm ,@points); SELECT LAST_INSERT_ID();";
             MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
-
+            
             sqlCmd.Parameters.Add(new MySqlParameter("@sentence", newQuestion.Sentence));
             sqlCmd.Parameters.Add(new MySqlParameter("@validAnswer", newQuestion.ValidAnswer));
-            sqlCmd.Parameters.Add(new MySqlParameter("@wrongAswer", newQuestion.WrongAnswer));
-            sqlCmd.Parameters.Add(new MySqlParameter("@idQuestion", newQuestion.Id));
-            sqlCmd.Parameters.Add(new MySqlParameter("@idQuestion", newQuestion.IdForm));
+            sqlCmd.Parameters.Add(new MySqlParameter("@wrongAnswer", newQuestion.WrongAnswer));
+           // sqlCmd.Parameters.Add(new MySqlParameter("@", newQuestion.Id));
+            sqlCmd.Parameters.Add(new MySqlParameter("@idForm", newQuestion.IdForm));
             sqlCmd.Parameters.Add(new MySqlParameter("@points", newQuestion.Points));
 
 
 
 
             sqlCmd.CommandType = CommandType.Text;
-             Id = (int)sqlCmd.ExecuteScalar();
+            Id = (Convert.ToInt32(sqlCmd.ExecuteScalar()));
             sqlCon.Close();
 
             return Id > 0;
         }
+
         public void updateQuestion(Question updatedQuestion)
         {
             MySqlConnection sqlCon = Configurations.connection;
