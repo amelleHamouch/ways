@@ -30,7 +30,7 @@ namespace Ways.Vues
         }
         public UserHomePage()
         {
-            
+         
             InitializeComponent();
             
         }

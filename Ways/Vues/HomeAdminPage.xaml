@@ -10,7 +10,7 @@
 
 
 
-    <Grid >
+    <Grid HorizontalAlignment="Stretch" Margin="0,70,0,0" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="71*"/>
@@ -20,7 +20,7 @@
             <TabItem Header="Emailing" Height="50" Width="80" FontSize="15" Background="#FFFF8A43">
 
 
-                <Frame x:Name="emailingView" NavigationUIVisibility="Hidden"  Background="Transparent" Height="auto" Padding="-10,0,0,-10" Navigated="emailingView_Navigated"></Frame>
+                <Frame x:Name="emailingView" NavigationUIVisibility="Hidden"  Height="auto" ></Frame>
 
             </TabItem>
 
@@ -32,6 +32,9 @@
 
             <TabItem Header="Scores" Height="50" Width="80" FontSize="15" Background="#FFFF8A43">
                 <Frame x:Name="score" NavigationUIVisibility="Hidden" Height="auto" ></Frame>
+            </TabItem>
+            <TabItem Header="Test" Height="50" Width="80" FontSize="15" Background="#FFFF8A43">
+                <Frame x:Name="Test" NavigationUIVisibility="Hidden" Height="auto" ></Frame>
             </TabItem>
 
         </TabControl>

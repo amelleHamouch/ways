@@ -13,14 +13,16 @@ namespace Ways.Classes
         private int id;
         private string login;
         private string pass;
-        private bool isAdmin;
+        private int isAdmin;
         private int score;
 
-        public bool IsAdmin { get => isAdmin; set => isAdmin = value; }
+        public int IsAdmin { get => isAdmin; set => isAdmin = value; }
         public string Login { get => login; set => login = value; }
         public int Id { get => id; set => id = value; }
         public string Pass { get => pass; set => pass = value; }
         public int Score { get => score; set => score = value; }
+
+
 
         public User(string login, string pass)
         {
@@ -90,6 +92,7 @@ namespace Ways.Classes
             return (int)sqlCmd.LastInsertedId;
         }
 
+
         public List<User> GetAllUsers() { 
         MySqlConnection sqlCon = Configurations.connection;
 
@@ -125,10 +128,10 @@ namespace Ways.Classes
             }
             reader.Close();
             sqlCon.Close();
-            return result;
-        
-          
+            return result;        
         }
+
+
         public static User getUserById(int id)
         {
 
@@ -152,6 +155,7 @@ namespace Ways.Classes
                 {
                     user.Id = reader.GetInt32(0);
                     user.Login = reader.GetString(1);
+                    user.isAdmin = reader.GetInt32(4);
                     try{
                         user.Score = reader.GetInt32(4);
                     }

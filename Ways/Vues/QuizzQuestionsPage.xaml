@@ -5,22 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Ways.Vues"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="1800"
-      Title="QuizzQuestionsPage" >
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="QuizzQuestionsPage"  Height="450" Width="Auto" Background="Transparent" >
 
     <Grid Margin="49.5,0,0,0"  >
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="25*"/>
 
-
-
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -56,15 +46,56 @@
             </StackPanel>
 
         </DockPanel>
-        <ListView  x:Name="questionList"  Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="10,32,0,0" Grid.RowSpan="5" Width="744" Height="296" Grid.ColumnSpan="2" >
+        <ListView  x:Name="questionList"  Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20"  Grid.RowSpan="5" Width="740" Height="289" >
             <ListView.View>
-                <GridView >
 
-                    <GridViewColumn Header="Enoncé" Width="Auto " DisplayMemberBinding="{Binding Sentence}" />
-                    <GridViewColumn  Header="Mauvaise réponse"  DisplayMemberBinding="{Binding WrongAnswer }"/>
-                    <GridViewColumn Header="Bonne réponse"     DisplayMemberBinding="{Binding ValidAnswer}" />
-                    <GridViewColumn Header="Points"  DisplayMemberBinding="{Binding Points}"/>
-                    <GridViewColumn Header="Modifier la question">
+                <GridView AllowsColumnReorder="true"
+              ColumnHeaderToolTip="Cliquer sur modfier pour changer les valeurs de la question de votre choix">
+
+
+                    <GridViewColumn Header="Enoncé" Width="150 "  >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Width="auto" Text="{Binding Sentence}" TextWrapping="WrapWithOverflow"></TextBlock>
+
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+
+                    </GridViewColumn>
+
+
+                    <GridViewColumn  Header="Mauvaise réponse" Width="150"  >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Width="auto" Text="{Binding WrongAnswer }"  TextWrapping="WrapWithOverflow"> </TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+
+                    </GridViewColumn>
+
+
+                    <GridViewColumn Header="Bonne réponse"   Width="150"     >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Width="auto" Text="{Binding ValidAnswer}"  TextWrapping="WrapWithOverflow"></TextBlock>
+
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+
+                    </GridViewColumn>
+
+
+                    <GridViewColumn Header="Points"  Width="150" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Width="auto" Text="{Binding Points}"  TextWrapping="WrapWithOverflow"></TextBlock>
+
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+
+                    <GridViewColumn Header="Modifier">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Tag="{Binding Id}" Content="Modifier"  Margin="20" VerticalAlignment="Center" Click="displayModification"  />
@@ -72,6 +103,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                 </GridView>
+
 
             </ListView.View>
         </ListView>

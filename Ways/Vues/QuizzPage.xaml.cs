@@ -14,9 +14,7 @@ using Ways.Classes;
 
 namespace Ways.Vues
 {
-    /// <summary>
-    /// Logique d'interaction pour QuizzPage.xaml
-    /// </summary>
+  
     public partial class QuizzPage : Page
     {
         List<Question> questionList;
@@ -27,7 +25,7 @@ namespace Ways.Vues
         int orientationScore;
         int userId;
         Formulary form = new Formulary();
-
+       
         public QuizzPage(int id, int playerScore, int userId)
         {
             InitializeComponent();

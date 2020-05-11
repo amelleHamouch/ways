@@ -26,12 +26,11 @@ namespace Ways.Vues
             quizzView.Content = new FormularyListPage();
             emailingView.Content = new AdminEmailSettingsPage();
             score.Content = new AdminScorePage();
+            //Id du formulaire de départ et Id Admin
+            Test.Content = new QuizzPage(1,2);
 
         }
 
-        private void emailingView_Navigated(object sender, NavigationEventArgs e)
-        {
 
-        }
     }
 }

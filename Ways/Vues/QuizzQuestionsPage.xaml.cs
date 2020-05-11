@@ -80,9 +80,10 @@ namespace Ways.Vues
             else {
                 QuizzQuestionsPage page = new QuizzQuestionsPage(IdForm.ToString());
                 NavigationService.Navigate(page);
-            }
-           
+            }           
         }
+
+
         private void displayModification(object sender, RoutedEventArgs e)
         {
             string idquestionToModify = (((Button)sender).Tag).ToString();
