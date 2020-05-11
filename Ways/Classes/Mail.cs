@@ -62,32 +62,38 @@ namespace Ways.Classes
 
         public static void sendMainMail(String emailAddress, string pseudoUser, string scoreUser, string orientationUser)
         {
+            try
+            {
+                IDictionary<string, string> emailSettings = getMailSettings();
+                MailMessage message = new MailMessage();
+                message.From = new MailAddress(emailSettings["mailAddress"].ToString());
+                message.To.Add(new MailAddress(emailAddress));
 
-            IDictionary<string, string> emailSettings = getMailSettings();
-            MailMessage message = new MailMessage();
-            message.From = new MailAddress(emailSettings["mailAddress"].ToString());
-            message.To.Add(new MailAddress(emailAddress));
-
-            string subject = emailSettings["sujet"].ToString();
-            // Interdiction d'avoir des retours à la ligne dans les sujets de mails 
-            subject = subject.Replace('\r', ' ').Replace('\n', ' ');
-            subject = subject.Replace("%pseudo%", pseudoUser);
-            subject = subject.Replace("%score%", scoreUser);
-            subject = subject.Replace("%orientation%", orientationUser);
-            message.Subject = subject;
+                string subject = emailSettings["sujet"].ToString();
+                // Interdiction d'avoir des retours à la ligne dans les sujets de mails 
+                subject = subject.Replace('\r', ' ').Replace('\n', ' ');
+                subject = subject.Replace("%pseudo%", pseudoUser);
+                subject = subject.Replace("%score%", scoreUser);
+                subject = subject.Replace("%orientation%", orientationUser);
+                message.Subject = subject;
 
 
-            message.Body = emailSettings["corps"].ToString();
-            message.Body = message.Body.Replace("%pseudo%", pseudoUser);
-            message.Body = message.Body.Replace("%score%", scoreUser);
-            message.Body = message.Body.Replace("%orientation%", orientationUser);
+                message.Body = emailSettings["corps"].ToString();
+                message.Body = message.Body.Replace("%pseudo%", pseudoUser);
+                message.Body = message.Body.Replace("%score%", scoreUser);
+                message.Body = message.Body.Replace("%orientation%", orientationUser);
 
-            SmtpClient client = new SmtpClient();
-            client.Credentials = new System.Net.NetworkCredential(emailSettings["mailAddress"], emailSettings["mailPassword"]);
+                SmtpClient client = new SmtpClient();
+                client.Credentials = new System.Net.NetworkCredential(emailSettings["mailAddress"], emailSettings["mailPassword"]);
 
-            client.Port = 587;
-            client.Host = "smtp.office365.com";
-            client.EnableSsl = true;
+                client.Port = 587;
+                client.Host = "smtp.office365.com";
+                client.EnableSsl = true;
+            }
+            catch (Exception ex){
+                Console.WriteLine(ex.Message);
+            }
+
             try
             {
                 client.Send(message);

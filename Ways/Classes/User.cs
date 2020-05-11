@@ -155,7 +155,7 @@ namespace Ways.Classes
                 {
                     user.Id = reader.GetInt32(0);
                     user.Login = reader.GetString(1);
-                    user.isAdmin = reader.GetInt32(4);
+                    user.isAdmin = reader.GetInt32(3);
                     try{
                         user.Score = reader.GetInt32(4);
                     }
