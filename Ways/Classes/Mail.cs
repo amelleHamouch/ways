@@ -62,10 +62,12 @@ namespace Ways.Classes
 
         public static void sendMainMail(String emailAddress, string pseudoUser, string scoreUser, string orientationUser)
         {
+            SmtpClient client = new SmtpClient();
+            IDictionary<string, string> emailSettings = getMailSettings();
+            MailMessage message = new MailMessage();
             try
             {
-                IDictionary<string, string> emailSettings = getMailSettings();
-                MailMessage message = new MailMessage();
+                
                 message.From = new MailAddress(emailSettings["mailAddress"].ToString());
                 message.To.Add(new MailAddress(emailAddress));
 
@@ -83,7 +85,7 @@ namespace Ways.Classes
                 message.Body = message.Body.Replace("%score%", scoreUser);
                 message.Body = message.Body.Replace("%orientation%", orientationUser);
 
-                SmtpClient client = new SmtpClient();
+                
                 client.Credentials = new System.Net.NetworkCredential(emailSettings["mailAddress"], emailSettings["mailPassword"]);
 
                 client.Port = 587;
