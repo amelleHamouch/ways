@@ -6,21 +6,17 @@
       xmlns:local="clr-namespace:Ways.Vues"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="600"
-      Title="HomeAdminPage"   Height="600" Width="Auto" Background="Transparent">
+      Title="HomeAdminPage"   Height="450" Width="Auto" Background="Transparent">
 
 
 
-    <Grid HorizontalAlignment="Stretch" Margin="0,70,0,0" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="71*"/>
-            <ColumnDefinition Width="702*"/>
-        </Grid.ColumnDefinitions>
-        <TabControl TabStripPlacement="Left" Margin="-10,10,21,24" Grid.ColumnSpan="3" Background="Transparent" >
+    <Grid Margin="0,-51,0,0"  >
+
+        <TabControl TabStripPlacement="Left" Margin="-10,10,21,24" Background="Transparent" >
             <TabItem Header="Emailing" Height="50" Width="80" FontSize="15" Background="#FFFF8A43">
 
 
-                <Frame x:Name="emailingView" NavigationUIVisibility="Hidden"  Height="auto" ></Frame>
+                <Frame x:Name="emailingView" NavigationUIVisibility="Hidden"  Height="auto" Margin="0,10,0,0" ></Frame>
 
             </TabItem>
 

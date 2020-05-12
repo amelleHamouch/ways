@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ways.Vues"
         mc:Ignorable="d"
-        Title="ModifyQuestionWindow" Height="395" Width="670"  WindowStartupLocation="CenterScreen">
+        Title="ModifyQuestionWindow"  Height="350" Width="525"
+    WindowStyle="None" ResizeMode="NoResize"  
+    WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Border  Background="#c9e9f6" CornerRadius="20"  Height="auto" Width="auto" >
         <Grid Margin="-30,0,0,0">
             <Grid.ColumnDefinitions>

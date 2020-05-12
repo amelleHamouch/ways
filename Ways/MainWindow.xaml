@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ways"
         mc:Ignorable="d"
-        Title="Ways" Height="720" Width="1080">
+        Title="Ways"  Height="350" Width="525"
+    WindowStyle="None" ResizeMode="NoResize"  
+    WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
             <GradientStop Color="#21BEB0" Offset="0"/>

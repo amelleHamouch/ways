@@ -6,9 +6,9 @@
       xmlns:local="clr-namespace:Ways.Vues"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="FormularyListPage"  Height="450" Width="Auto" Background="Transparent">
+      Title="FormularyListPage"  Height="auto" Width="Auto" Background="Transparent">
 
-    <Grid Height="300"   Background="Transparent" Margin="0,0,0,10" VerticalAlignment="Top">
+    <Grid Height="440" Width="auto"   Background="Transparent" VerticalAlignment="Top">
         <Grid.ColumnDefinitions  >
             <ColumnDefinition Width="10*"></ColumnDefinition>
 
@@ -20,27 +20,22 @@
 
 
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
 
 
 
-
-        </Grid.RowDefinitions>
-
-
-        <ListView  x:Name="formularyList" Grid.ColumnSpan="6" Grid.Row="0" SelectionChanged="formularyList_SelectionChanged"  Background="Transparent" VerticalAlignment="Top" Height="393" Grid.RowSpan="2" >
+        <ListView  x:Name="formularyList" Grid.ColumnSpan="6" SelectionChanged="formularyList_SelectionChanged"  Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="42,0,0,0"  >
             <ListView.View>
                 <GridView>
 
-                    <GridViewColumn Header="Id " Width="50" >
+                    <GridViewColumn Header="Id " Width="150" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding IdFormulary}"  Margin="0" VerticalAlignment="Center"  Height="150" FontSize="18" HorizontalAlignment="Right" />
+                                <TextBlock Text="{Binding IdFormulary}"  Margin="0" VerticalAlignment="Center"  Height="auto" FontSize="18" HorizontalAlignment="Right" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn Header="Nom du Questionnaire" Width="220" >
+                    <GridViewColumn Header="Nom du Questionnaire" Width="auto" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Name}"  Margin="0" VerticalAlignment="Center"  Height="150" FontSize="18"/>
@@ -48,7 +43,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn Header="Coefficient" Width="80" >
+                    <GridViewColumn Header="Total" Width="auto" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Coef}"  Margin="0" VerticalAlignment="Center"  Height="150" FontSize="18"/>
@@ -56,7 +51,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn Header="Type" Width="150" >
+                    <GridViewColumn Header="Type" Width="auto" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Type}"  Margin="0" VerticalAlignment="Center"  Height="150" FontSize="18" TextWrapping="WrapWithOverflow"/>
@@ -64,7 +59,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn Header="Description" Width="180" >
+                    <GridViewColumn Header="Description" Width="auto" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Description}"  Margin="0" VerticalAlignment="Center" Width="300" Height="150"  FontSize="18"  TextWrapping="WrapWithOverflow"/>
@@ -72,7 +67,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn Header="Voir" Width="100">
+                    <GridViewColumn Header="Voir" Width="auto">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Tag="{Binding IdFormulary}" Content="détails" Margin="0" VerticalAlignment="Center" Click="modifyForm" />

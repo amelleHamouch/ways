@@ -106,8 +106,16 @@ namespace Ways.Vues
 
         private void addQuestionToForm(object sender, RoutedEventArgs e)
         {
-            Question question = new Question();
-          
+            Question question = new Question
+            {
+
+                Sentence = SentenceTxt.Text,
+                ValidAnswer = Right.Text,
+                WrongAnswer = Wrong.Text,
+                IdForm = IdForm,
+                Points = Int32.Parse(Pointxt.Text)
+            };
+
             bool success = question.addQuestion(question);
             if(success)
             {
