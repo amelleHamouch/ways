@@ -27,10 +27,10 @@
             <ListView.View>
                 <GridView>
 
-                    <GridViewColumn Header="Id " Width="150" >
+                    <GridViewColumn Header="Id " Width="auto"  >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding IdFormulary}"  Margin="0" VerticalAlignment="Center"  Height="auto" FontSize="18" HorizontalAlignment="Right" />
+                                <TextBlock Text="{Binding IdFormulary}"  VerticalAlignment="Center"  Height="150" FontSize="18" HorizontalAlignment="Right" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

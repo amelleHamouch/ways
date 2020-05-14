@@ -8,7 +8,15 @@
         Title="ModifyQuestionWindow"  Height="350" Width="525"
     WindowStyle="None" ResizeMode="NoResize"  
     WindowStartupLocation="CenterScreen" WindowState="Maximized">
-    <Border  Background="#c9e9f6" CornerRadius="20"  Height="auto" Width="auto" >
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+            <GradientStop Color="#21BEB0" Offset="0"/>
+            <GradientStop Color="#008F98" Offset="0.5"/>
+            <GradientStop Color="#206D83" Offset="1"/>
+
+        </LinearGradientBrush>
+    </Window.Background>
+    <Border  Background="Transparent" CornerRadius="20"  Height="auto" Width="auto" >
         <Grid Margin="-30,0,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -28,7 +36,7 @@
 
 
             <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Label x:Name="announce" HorizontalAlignment="Center" Content="MODIFICATION" Foreground="#ff7f50" FontSize="30"  Height="62"></Label>
+                <Label x:Name="announce" HorizontalAlignment="Center" Content="MODIFICATION" Foreground="Yellow" FontSize="30"  Height="62"></Label>
 
             </StackPanel>
 
@@ -59,8 +67,8 @@
                 <TextBox x:Name="pointsBox" MinWidth="250"  Background="#005C75" Foreground="White" FontSize="20"/>
             </StackPanel>
             <WrapPanel Grid.Row="4"  Grid.Column="1" HorizontalAlignment="Center" Margin="0,132,0,-117">
-                <Button IsDefault="True" x:Name="btnDialogOk1" Click="btnDialogOk_Click" MinWidth="60" Margin="0,0,10,0" Foreground="white" FontSize="20" Background="#ff7f50"  Content="_Ok"/>
-                <Button IsCancel="True" MinWidth="60" Content="Annuler" Click="Cancel" Foreground="white" FontSize="20" Background="#ff7f50" />
+                <Button IsDefault="True" x:Name="btnDialogOk1" Click="btnDialogOk_Click" MinWidth="60" Margin="0,0,10,0" Foreground="#005C75" FontSize="20" Background="yellow"  Content="_Ok"/>
+                <Button IsCancel="True" MinWidth="60" Content="Annuler" Click="Cancel" Foreground="#005C75" FontSize="20" Background="Yellow" />
             </WrapPanel>
         </Grid>
     </Border>

@@ -29,11 +29,6 @@ namespace Ways.Vues
 
         }
 
-       
-
-        private void deleteUserEntryy(object sender, RoutedEventArgs e)
-        {
-
-        }
+    
     }
 }

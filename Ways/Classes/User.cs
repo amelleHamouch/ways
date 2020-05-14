@@ -173,6 +173,48 @@ namespace Ways.Classes
 
             return result;
         }
+        public bool deleteUserById(int userId)
+        {
+            bool success ;
+            try
+            {
+                MySqlConnection sqlCon = Configurations.connection;
+
+                if (sqlCon.State == ConnectionState.Closed)
+                    sqlCon.Open();
+                String query = "DELETE * FROM user where idUser = @id ;";
+                MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+                sqlCmd.Parameters.Add(new MySqlParameter("@id", userId));
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+
+                return true;
+
+            }
+            catch (MySqlException ex)
+            {
+                return false;
+            }
+
+        }
+        public void updateUserScore(int score , int userId)
+        {
+            MySqlConnection sqlCon = Configurations.connection;
+
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
+            String query = "UPDATE user SET Score = @score Where idUser = @userId ;";
+            MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+
+            sqlCmd.Parameters.Add(new MySqlParameter("@score", score));
+            sqlCmd.Parameters.Add(new MySqlParameter("@userId", userId));
+
+            sqlCmd.CommandType = CommandType.Text;
+            sqlCmd.ExecuteScalar();
+            sqlCon.Close();
+        }
     }
+
 
 }

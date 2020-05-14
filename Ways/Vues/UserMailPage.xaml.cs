@@ -23,7 +23,6 @@ namespace Ways.Vues
     {
         new User user = new User();
         int scoreUser;
-        int userId;
         string userOrientation;
         public UserMailPage(string orientation, int score, int userId)
         {
@@ -31,6 +30,7 @@ namespace Ways.Vues
             user = User.getUserById(userId);
             scoreUser = score;
             userOrientation = orientation;
+            
         }
 
         private void sendAllEmails(object sender, RoutedEventArgs e)
@@ -40,9 +40,11 @@ namespace Ways.Vues
             if (emailBonus2.Text != "")Mail.sendPromoMail(emailBonus2.Text, user.Login, scoreUser.ToString(), userOrientation); 
             if (emailBonus3.Text != "")Mail.sendPromoMail(emailBonus3.Text, user.Login, scoreUser.ToString(), userOrientation);
             if (emailBonus4.Text != "")Mail.sendPromoMail(emailBonus4.Text, user.Login, scoreUser.ToString(), userOrientation);
+            user.updateUserScore(scoreUser, user.Id);
             this.NavigationService.Navigate(new UserEndPage());
 
         }
+
 
         
     }

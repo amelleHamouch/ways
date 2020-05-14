@@ -126,9 +126,9 @@
                 <Button Content="Retour"  Height="28" Width="78" Click="ReturnBtn" Margin="15,15,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.471,-0.113" />
 
             </StackPanel>
+            <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Grid.Row="5" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="1436" Height="180" Margin="140,0,0,0" Grid.ColumnSpan="4"/>
 
         </DockPanel>
-        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Grid.Row="5" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="1436" Height="180" Margin="140,0,0,0" Grid.ColumnSpan="4"/>
 
     </Grid>
 </Page>
