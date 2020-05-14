@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Ways.Classes;
 
 namespace Ways.Vues
 {
@@ -18,9 +19,17 @@ namespace Ways.Vues
     /// </summary>
     public partial class UserEndPage : Page
     {
-        public UserEndPage()
+        int userId;
+        public UserEndPage(int userId)
         {
+            this.userId = userId;
+
             InitializeComponent();
+        }
+
+        private void startBonusQuizz(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new QuizzPage(3, userId));
         }
     }
 }

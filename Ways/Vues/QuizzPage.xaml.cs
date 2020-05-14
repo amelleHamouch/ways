@@ -83,10 +83,13 @@ namespace Ways.Vues
             if (actualQuestion == questionList.Count)
             {
                 if(formId == 1)
-                {   
+                {
                     this.NavigationService.Navigate(new UserOrientationPage(score, this.userId));
                 }
-                else
+                else if(formId == 3)
+                {
+                    this.NavigationService.Navigate(new WaysHomePage());
+                }else
                 {
                     this.NavigationService.Navigate(new UserMailPage(orientationScore.ToString(), score, this.userId));
                 }

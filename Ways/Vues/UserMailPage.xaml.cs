@@ -41,7 +41,7 @@ namespace Ways.Vues
             if (emailBonus3.Text != "")Mail.sendPromoMail(emailBonus3.Text, user.Login, scoreUser.ToString(), userOrientation);
             if (emailBonus4.Text != "")Mail.sendPromoMail(emailBonus4.Text, user.Login, scoreUser.ToString(), userOrientation);
             user.updateUserScore(scoreUser, user.Id);
-            this.NavigationService.Navigate(new UserEndPage());
+            this.NavigationService.Navigate(new UserEndPage(user.Id));
 
         }
 

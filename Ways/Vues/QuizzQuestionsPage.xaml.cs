@@ -106,7 +106,9 @@ namespace Ways.Vues
 
         private void addQuestionToForm(object sender, RoutedEventArgs e)
         {
-            Question question = new Question
+            try
+            {
+                Question question = new Question
             {
 
                 Sentence = SentenceTxt.Text,
@@ -126,6 +128,11 @@ namespace Ways.Vues
             {
                  MessageBox.Show("Veillez à renseigner tout les champs");
             }
-}
+            }catch (FormatException)
+            {
+                MessageBox.Show("Veillez à renseigner tout les champs");
+
+            }
+    }
     }
 }

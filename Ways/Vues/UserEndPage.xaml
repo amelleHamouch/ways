@@ -9,6 +9,10 @@
       Title="UserEndPage">
 
     <Grid>
-        <Label Content="Merci pour votre participation !" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48"></Label>
+        <Label Content="Merci pour votre participation !" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontSize="48"></Label>
+        <TextBlock HorizontalAlignment="Center" Height="145" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" Width="513" FontSize="20" Text="Aidez nous à mieux vous connaitre en participant à notre enquêtes anonyme, vos précieuses réponses permettront de mieux répondre aux besoins des étudiants " />
+
+        <Button Content="Répondre" Background="Yellow" Foreground="DarkCyan" HorizontalAlignment="Left" Margin="341,270,0,0" VerticalAlignment="Top" Height="28" Width="83" Click="startBonusQuizz" />
+
     </Grid>
 </Page>

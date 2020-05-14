@@ -182,7 +182,7 @@ namespace Ways.Classes
 
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
-                String query = "DELETE * FROM user where idUser = @id ;";
+                String query = "DELETE FROM user where idUser = @id ;";
                 MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
                 sqlCmd.Parameters.Add(new MySqlParameter("@id", userId));
                 sqlCmd.CommandType = CommandType.Text;
