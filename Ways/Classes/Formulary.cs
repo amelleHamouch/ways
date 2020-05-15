@@ -18,43 +18,57 @@ namespace Ways.Classes
         private List<Question> questionList;
         private string type;
         private string description;
-        private int coef;
 
 
         public int IdFormulary { get => idFormulary; set => idFormulary = value; }
         public string Name { get => name; set => name = value; }
         internal List<Question> QuestionList { get => questionList; set => questionList = value; }
         public string Type { get => type; set => type = value; }
-        public int Coef { get => coef; set => coef = value; }
+        
         public string Description { get => description; set => description = value; }
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public Formulary(string name)
         {
 
             this.Name = name;
             this.idFormulary = initIntoDb();
-            
+
         }
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public Formulary()
         {
             this.QuestionList = new List<Question>();
         }
 
+        /// <summary>
+        /// Récupération questions du formulaire
+        /// </summary>
         public List<Question> getListQuestion()
         {
             return this.QuestionList;
         }
 
+        /// <summary>
+        /// Ajouter une question
+        /// </summary>
         public void addQuestion(string question, string wrongAnswer, string rightAnswer)
         {
             this.QuestionList.Add(new Question(question, rightAnswer, wrongAnswer, this.IdFormulary));
         }
 
+        /// <summary>
+        /// Ajout du Formulaire
+        /// </summary>
         public int initIntoDb()
         {
             MySqlConnection sqlCon = Configurations.connection;
-            
+
             if (sqlCon.State == ConnectionState.Closed)
                 sqlCon.Open();
             String query = "INSERT INTO `formulary`(`name`) VALUES (@name);SELECT LAST_INSERT_ID();";
@@ -65,9 +79,12 @@ namespace Ways.Classes
             int id = (Convert.ToInt32(sqlCmd.ExecuteScalar()));
             return id;
 
-     
+
         }
 
+        /// <summary>
+        /// Formulaire par Id
+        /// </summary>
         public Formulary getFormById(int id)
         {
 
@@ -91,13 +108,12 @@ namespace Ways.Classes
                 {
                     form.IdFormulary = reader.GetInt32(0);
                     form.Name = reader.GetString(1);
-                    form.Coef = reader.GetInt32(2);
-                    form.Type = reader.GetString(3);
-                    form.Description = reader.GetString(4);
+                    form.Type = reader.GetString(2);
+                    form.Description = reader.GetString(3);
 
 
                 };
-                result= form;
+                result = form;
             }
             reader.Close();
             sqlCon.Close();

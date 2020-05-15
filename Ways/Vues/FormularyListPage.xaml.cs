@@ -67,9 +67,8 @@ namespace Ways.Vues
                 {
                     form.IdFormulary = reader.GetInt32(0);
                     form.Name = reader.GetString(1);
-                    form.Coef = reader.GetInt32(2);
                     form.Type = reader.GetString(3);
-                    form.Description = reader.GetString(4);
+                    form.Description = reader.GetString(3);
 
                 };
                 result.Add(form);

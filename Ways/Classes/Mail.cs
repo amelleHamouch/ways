@@ -10,6 +10,9 @@ namespace Ways.Classes
 {
     class Mail
     {
+        /// <summary>
+        /// enregistrer paramètre
+        /// </summary>
         public static void saveMailSettings(string mailAddress, string mailPassword, string corps, string sujet, string promoSujet, string promoMail)
         {
             MySqlConnection sqlCon = Configurations.connection;
@@ -31,6 +34,9 @@ namespace Ways.Classes
             sqlCon.Close();
         }
 
+        /// <summary>
+        /// récupération paramètre
+        /// </summary>
         public static IDictionary<string, string> getMailSettings()
         {
             Question result = new Question();
@@ -53,13 +59,16 @@ namespace Ways.Classes
             mailSettings.Add("promoSujet", reader.GetString(5));
             mailSettings.Add("promoMail", reader.GetString(6));
 
-       
+
             reader.Close();
             sqlCon.Close();
 
             return mailSettings;
         }
 
+        /// <summary>
+        /// Envoyer mail principal
+        /// </summary>
         public static void sendMainMail(String emailAddress, string pseudoUser, string scoreUser, string orientationUser)
         {
             SmtpClient client = new SmtpClient();
@@ -67,7 +76,7 @@ namespace Ways.Classes
             MailMessage message = new MailMessage();
             try
             {
-                
+
                 message.From = new MailAddress(emailSettings["mailAddress"].ToString());
                 message.To.Add(new MailAddress(emailAddress));
 
@@ -85,14 +94,15 @@ namespace Ways.Classes
                 message.Body = message.Body.Replace("%score%", scoreUser);
                 message.Body = message.Body.Replace("%orientation%", orientationUser);
 
-                
+
                 client.Credentials = new System.Net.NetworkCredential(emailSettings["mailAddress"], emailSettings["mailPassword"]);
 
                 client.Port = 587;
                 client.Host = "smtp.office365.com";
                 client.EnableSsl = true;
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 Console.WriteLine(ex.Message);
             }
 
@@ -102,10 +112,13 @@ namespace Ways.Classes
             }
             catch (Exception ex)
             {
-               Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
-        
+
+        /// <summary>
+        /// Envoi mail de parrainage
+        /// </summary>
         public static void sendPromoMail(String emailAddress, string pseudoUser, string scoreUser, string orientationUser)
         {
 
@@ -140,7 +153,7 @@ namespace Ways.Classes
             }
             catch (Exception ex)
             {
-               Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
     }

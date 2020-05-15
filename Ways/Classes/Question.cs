@@ -23,6 +23,9 @@ namespace Ways.Classes
         public string Sentence { get => sentence; set => sentence = value; }
         public int Points { get => points; set => points = value; }
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public Question(string sentence, string validAnswer, string wrongAnswer, int idForm)
         {
             this.Sentence = sentence;
@@ -31,10 +34,16 @@ namespace Ways.Classes
             this.IdForm = idForm;
         }
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public Question()
         {
         }
 
+        /// <summary>
+        /// Ajout d'une question à un formulaire
+        /// </summary>
         public bool addQuestion(Question newQuestion)
         {
             MySqlConnection sqlCon = Configurations.connection;
@@ -43,11 +52,11 @@ namespace Ways.Classes
                 sqlCon.Open();
             String query = "INSERT INTO question (`content`,`validAnswer`,`wrongAnswer`,`idForm`,`points` ) VALUES ( @sentence, @validAnswer, @wrongAnswer,@idForm ,@points); SELECT LAST_INSERT_ID();";
             MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
-            
+
             sqlCmd.Parameters.Add(new MySqlParameter("@sentence", newQuestion.Sentence));
             sqlCmd.Parameters.Add(new MySqlParameter("@validAnswer", newQuestion.ValidAnswer));
             sqlCmd.Parameters.Add(new MySqlParameter("@wrongAnswer", newQuestion.WrongAnswer));
-           // sqlCmd.Parameters.Add(new MySqlParameter("@", newQuestion.Id));
+            // sqlCmd.Parameters.Add(new MySqlParameter("@", newQuestion.Id));
             sqlCmd.Parameters.Add(new MySqlParameter("@idForm", newQuestion.IdForm));
             sqlCmd.Parameters.Add(new MySqlParameter("@points", newQuestion.Points));
 
@@ -84,10 +93,13 @@ namespace Ways.Classes
             
         }
 
-        public Question getQuestionsById( int id)
+        /// <summary>
+        /// Select question par Id
+        /// </summary>
+        public Question getQuestionsById(int id)
         {
 
-           Question result =new Question();
+            Question result = new Question();
             MySqlConnection sqlCon = Configurations.connection;
 
             if (sqlCon.State == ConnectionState.Closed)
@@ -124,6 +136,9 @@ namespace Ways.Classes
 
 
 
+        /// <summary>
+        /// Récupération liste question par Id formulaire
+        /// </summary>
         public List<Question> getQuestionsByFormId(int idform)
         {
 

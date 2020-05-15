@@ -33,7 +33,11 @@ namespace Ways.Classes
         {
             
         }
-        public bool AdminConnect(User admin) {
+        /// <summary>
+        /// Connexion de l'administrateur
+        /// </summary>
+        public bool AdminConnect(User admin)
+        {
 
 
 
@@ -68,12 +72,15 @@ namespace Ways.Classes
             catch (Exception ex)
             {
 
-                Console.WriteLine( ex.Message);
+                Console.WriteLine(ex.Message);
                 return false;
             }
-          
+
         }
-     
+
+        /// <summary>
+        /// Création Candidat et Ajout du Pseudo
+        /// </summary>
         public int CreateUser(String username)
         {
 
@@ -93,8 +100,12 @@ namespace Ways.Classes
         }
 
 
-        public List<User> GetAllUsers() { 
-        MySqlConnection sqlCon = Configurations.connection;
+        /// <summary>
+        /// Récupération de tout les utilisateur en base
+        /// </summary>
+        public List<User> GetAllUsers()
+        {
+            MySqlConnection sqlCon = Configurations.connection;
 
             List<User> result = new List<User>();
 
@@ -115,23 +126,27 @@ namespace Ways.Classes
                 {
                     user.Id = reader.GetInt32(0);
                     user.Login = reader.GetString(1);
-                    try{
+                    try
+                    {
                         user.Score = reader.GetInt32(4);
                     }
                     catch
                     {
                         user.Score = 0;
                     }
-                    
+
                 };
                 result.Add(user);
             }
             reader.Close();
             sqlCon.Close();
-            return result;        
+            return result;
         }
 
 
+        /// <summary>
+        /// Recherche User par Id
+        /// </summary>
         public static User getUserById(int id)
         {
 
@@ -156,14 +171,15 @@ namespace Ways.Classes
                     user.Id = reader.GetInt32(0);
                     user.Login = reader.GetString(1);
                     user.isAdmin = reader.GetInt32(3);
-                    try{
+                    try
+                    {
                         user.Score = reader.GetInt32(4);
                     }
                     catch
                     {
                         user.Score = 0;
                     }
-                    
+
                 };
 
                 result = user;
@@ -173,9 +189,12 @@ namespace Ways.Classes
 
             return result;
         }
+        /// <summary>
+        /// Suppression User par Id
+        /// </summary>
         public bool deleteUserById(int userId)
         {
-            bool success ;
+            bool success;
             try
             {
                 MySqlConnection sqlCon = Configurations.connection;

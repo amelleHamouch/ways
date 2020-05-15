@@ -43,13 +43,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn Header="Total" Width="auto" >
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Coef}"  Margin="0" VerticalAlignment="Center"  Height="150" FontSize="18"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
+                   
 
                     <GridViewColumn Header="Type" Width="auto" >
                         <GridViewColumn.CellTemplate>
