@@ -28,6 +28,7 @@ namespace Ways.Vues
             score.Content = new AdminScorePage();
             //Id du formulaire de départ et Id Admin
             Test.Content = new QuizzPage(1,2);
+            Stats.Content = new AdminViewStats();
 
         }
 

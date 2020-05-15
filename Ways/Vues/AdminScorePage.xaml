@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Ways.Vues"
       mc:Ignorable="d" 
-     d:DesignHeight="600" d:DesignWidth="1600"
+     d:DesignHeight="800" d:DesignWidth="1600"
     Title="AdminScorePage"  Background="Transparent">
 
         <Grid Width="auto" Height="auto" Background="Transparent">
