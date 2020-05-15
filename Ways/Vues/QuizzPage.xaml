@@ -28,23 +28,35 @@
         </Grid.RowDefinitions>
 
         <StackPanel  Grid.ColumnSpan="3" Grid.Row="0" VerticalAlignment="Center">
-            <Label Content="Quizz" Foreground="White" FontSize="28" HorizontalAlignment="Center" Height="92" VerticalAlignment="Center" ></Label>
+            <Label Content="Quizz" Foreground="White" FontSize="28"  HorizontalAlignment="Center" Height="92" VerticalAlignment="Center" ></Label>
 
             <Separator></Separator>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="1">
-            <Label x:Name="QuestionLabel" Content="Question here !" Foreground="#005C75" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"></Label>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <TextBlock x:Name="QuestionLabel" Text="Question here !" TextAlignment="Center" Foreground="#005C75" HorizontalAlignment="Center" FontSize="20" Height="81" Width="478" TextWrapping="WrapWithOverflow"></TextBlock>
         </StackPanel>
 
 
-        <StackPanel Grid.Row="3" Grid.ColumnSpan="1">
-            <Button Grid.Column="1" x:Name="WrongAnswer" Content="Answer here !" Foreground="white" FontSize="22" Background="#ff7f50" Click="Answer" Margin="50,0,50,0" />
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="1" >
+            <Button Padding="5" Grid.Column="1"  Foreground="#005C75" FontSize="22" Background="#d1b711" Click="Answer" Height="90" HorizontalAlignment="Stretch">
+
+
+                <TextBlock  x:Name="wrongAnswer" TextAlignment="Center"  TextWrapping="WrapWithOverflow"></TextBlock>
+
+            </Button>
+
         </StackPanel>
-        <StackPanel Grid.Row="3" Grid.Column="2">
-            <Button Grid.Column="2" x:Name="RightAnswer" Content="Answer here !" Foreground="white" FontSize="22" Background="#ff7f50" Click="Answer" Margin="50,0,50,0" />
+
+        <StackPanel Grid.Row="2" Grid.Column="2">
+
+
+            <Button Grid.Column="2"  Foreground="#005C75" FontSize="22" Background="#d1b711" Click="Answer" Height="86"  >
+                <TextBlock  x:Name="rightAnswer" TextAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+
+            </Button>
         </StackPanel>
-        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Center" Grid.Row="3" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Height="52"/>
+        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Center" TextAlignment="Center" Grid.Row="3" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Height="52"/>
 
 
     </Grid>

@@ -57,11 +57,11 @@ namespace Ways.Vues
         private void displayQuestion()
         {
            
-            QuestionLabel.Content = questionList[actualQuestion].Sentence;
+            QuestionLabel.Text = questionList[actualQuestion].Sentence;
             var random = new Random();
             bool inverseQuestion = random.Next(2) == 1;
-            RightAnswer.Content = inverseQuestion ? questionList[actualQuestion].ValidAnswer : questionList[actualQuestion].WrongAnswer;
-            WrongAnswer.Content = !inverseQuestion ? questionList[actualQuestion].ValidAnswer : questionList[actualQuestion].WrongAnswer;
+            rightAnswer.Text = inverseQuestion ? questionList[actualQuestion].ValidAnswer : questionList[actualQuestion].WrongAnswer;
+            wrongAnswer.Text = !inverseQuestion ? questionList[actualQuestion].ValidAnswer : questionList[actualQuestion].WrongAnswer;
         }
 
         private List<Question> getQuestions(int id)
