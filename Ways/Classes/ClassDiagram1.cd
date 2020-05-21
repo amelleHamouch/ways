@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
   <Class Name="Ways.Classes.Configurations">
-    <Position X="3.25" Y="2" Width="1.5" />
+    <Position X="6.75" Y="5.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Classes\Configurations.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Ways.Classes.Formulary">
-    <Position X="10" Y="2" Width="3" />
+    <Position X="3.75" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>BCQAAAQAAAAgAAAAIAAGAAQABgAFAAAABQAAAAQAAAA=</HashCode>
       <FileName>Classes\Formulary.cs</FileName>
@@ -18,23 +18,23 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Ways.Classes.Mail">
-    <Position X="3.25" Y="4.75" Width="1.5" />
+    <Position X="3.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAEAAAAAAAAAQAAAAAAAAAAABAAAAAAEAAAA=</HashCode>
       <FileName>Classes\Mail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Ways.Classes.Question">
-    <Position X="14.25" Y="2" Width="3.25" />
+    <Position X="6.75" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AgBCAACYQAAAkAAAAAAAAAQAggAAAAAAAAAAQAIAAkA=</HashCode>
       <FileName>Classes\Question.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Ways.Classes.User">
-    <Position X="6.5" Y="2" Width="2.5" />
+    <Position X="9.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAgCAAAAAQQAAAgEAAAKAAAACAAAAAgAAAAQAAEAEgA=</HashCode>
+      <HashCode>AAgCAAAAAQQAAAgFAAAKAAAACgAAAAgAAAAQAAEAEgA=</HashCode>
       <FileName>Classes\User.cs</FileName>
     </TypeIdentifier>
   </Class>

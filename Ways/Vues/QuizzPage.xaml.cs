@@ -108,7 +108,7 @@ namespace Ways.Vues
                     this.NavigationService.Navigate(new WaysHomePage());
                 }else
                 {
-                    this.NavigationService.Navigate(new UserMailPage(orientationScore.ToString(), score, this.userId));
+                    this.NavigationService.Navigate(new UserScorePage(orientationScore.ToString(), score, this.userId));
                 }
             }
             else

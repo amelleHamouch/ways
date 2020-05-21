@@ -71,6 +71,6 @@
             <TextBox  x:Name="emailBonus3" Background="#005C75" Margin="5,0,0,0"></TextBox>
         </StackPanel>
 
-        <Button  x:Name="sendbtn" Grid.Column="2" Grid.Row="4" Content="ENVOYER" Background="Yellow" Foreground="#005C75" FontSize="20" Margin="69,22,106,0" Click="sendAllEmails"/>
+        <Button  x:Name="sendbtn" Grid.Column="2" Grid.Row="4" Content="SUIVANT" Background="Yellow" Foreground="#005C75" FontSize="20" Margin="69,22,106,0" Click="sendAllEmails"/>
     </Grid>
 </Page>
