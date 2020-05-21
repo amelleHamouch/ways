@@ -30,6 +30,7 @@
         </StackPanel>
 
         <Frame x:Name="Main" NavigationUIVisibility="Hidden" Grid.RowSpan="2" />
+        <Button Content="X" Background="Yellow"  HorizontalAlignment="Right" Margin="455,0,30,100" VerticalAlignment="Center" Click="Button_Click"/>
 
     </Grid>
 </Window>
