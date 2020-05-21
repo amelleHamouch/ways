@@ -233,6 +233,22 @@ namespace Ways.Classes
             sqlCmd.ExecuteScalar();
             sqlCon.Close();
         }
+
+        public static void addAnswerToStat(int idQuestion, int answer) {
+            MySqlConnection sqlCon = Configurations.connection;
+
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
+            String query = "INSERT INTO statistics (idQuestion, Answer) VALUES (@IdQuestion, @Answer)";
+            MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+
+            sqlCmd.Parameters.Add(new MySqlParameter("@IdQuestion", idQuestion));
+            sqlCmd.Parameters.Add(new MySqlParameter("@Answer", answer));
+
+            sqlCmd.CommandType = CommandType.Text;
+            sqlCmd.ExecuteScalar();
+            sqlCon.Close();
+        }
     }
 
 

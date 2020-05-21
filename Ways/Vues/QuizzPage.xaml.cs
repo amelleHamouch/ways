@@ -38,6 +38,7 @@ namespace Ways.Vues
             displayQuestion();
         }
 
+
         public QuizzPage(int id, int userId)
         {
             InitializeComponent();
@@ -77,9 +78,25 @@ namespace Ways.Vues
 
         private void Answer(object sender, RoutedEventArgs e)
         {
-            var answer = (e.Source as Button).Content.ToString();
-            score += answer == questionList[actualQuestion].ValidAnswer ? 1 : -1;
+            var answerButton = (e.Source as Button).Name.ToString();
+            string answer = "";
+            if (answerButton == "wrongAnswer"){
+                answer = wrongAnswer.Text;
+            }
+            else
+            {
+                answer = rightAnswer.Text;
+            }
+            score += answer == questionList[actualQuestion].ValidAnswer ? 1 : -1;  // Ternaire si question selectionnée = bonne réponse ajouter + ou - au score
+
+            if (formId == 3 && actualQuestion != questionList.Count)
+            {
+                User.addAnswerToStat(questionList[actualQuestion].Id, (answer == questionList[actualQuestion].ValidAnswer ? 1 : 0));  // Ternaire si question selectionnée = bonne réponse 1 ou 0 (vrai ou faux)
+                score = 0;
+            }
+
             actualQuestion++;
+
             if (actualQuestion == questionList.Count)
             {
                 if(formId == 1)
