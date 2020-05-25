@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Ways.Classes;
 
 namespace Ways.Vues
 {
@@ -21,8 +22,21 @@ namespace Ways.Vues
         public AdminViewStats()
         {
             InitializeComponent();
+            List<Question> result = getStat(); // On rempli le tableau avec les informations statistiques 
+            listStats.ItemsSource = result;
+            DataContext = result;
         }
 
-    
+        private List<Question> getStat()
+        {
+            Question question = new Question();
+
+            List<Question> result = new List<Question>();
+            result = question.getStats();
+
+            return result;
+
+        }
+
     }
 }

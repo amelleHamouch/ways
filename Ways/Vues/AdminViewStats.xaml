@@ -35,8 +35,10 @@
             <Label x:Name="ScoreLabel" Foreground="Yellow" FontSize="40"  FontFamily="Franklin Gothic Medium" HorizontalAlignment="Center" Content="Statistiques Bonus " ></Label>
         </StackPanel>
 
+        <TextBlock x:Name="test" Grid.ColumnSpan="4" Margin="0,0,33,0"></TextBlock>
+
         <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
-            <ListView  x:Name="listUsers" Grid.ColumnSpan="4" Margin="0,0,49,0" Grid.RowSpan="6" Grid.Row="1" Background="Transparent" Height="27" SelectionChanged="listUsers_SelectionChanged" HorizontalAlignment="Center">
+            <ListView x:Name="listStats" Grid.ColumnSpan="4" Margin="0,0,49,0" Grid.RowSpan="6" Grid.Row="1" Background="Transparent" Height="389" HorizontalAlignment="Center">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn  Header="Intitulé" Width="321"  >
@@ -48,7 +50,7 @@
 
                         </GridViewColumn>
 
-                        <GridViewColumn Header="Pourcentage Positif" Width="321" DisplayMemberBinding="{Binding stat}"/>
+                        <GridViewColumn Header="Pourcentage Positif" Width="321" DisplayMemberBinding="{Binding Stat}"/>
 
 
 

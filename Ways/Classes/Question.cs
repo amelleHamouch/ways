@@ -14,6 +14,7 @@ namespace Ways.Classes
         private string wrongAnswer;
         private int idForm;
         private int points;
+        private string stat;
 
 
         public int Id { get => id; set => id = value; }
@@ -21,6 +22,7 @@ namespace Ways.Classes
         public string WrongAnswer { get => wrongAnswer; set => wrongAnswer = value; }
         public int IdForm { get => idForm; set => idForm = value; }
         public string Sentence { get => sentence; set => sentence = value; }
+        public string Stat { get => stat; set => stat = value; }
         public int Points { get => points; set => points = value; }
 
         /// <summary>
@@ -173,6 +175,40 @@ namespace Ways.Classes
             return result;
         }
 
+        public List<Question> getStats()
+        {
+            // SELECT content, statistics.idQuestion, avg(Answer) FROM `statistics` INNER JOIN `question` on statistics.idQuestion = question.idQuestion GROUP BY statistics.idQuestion, question.idQuestion;
+
+            List<Question> result = new List<Question>();
+            MySqlConnection sqlCon = Configurations.connection;
+
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
+            String query = "SELECT content, statistics.idQuestion, avg(Answer) FROM `statistics` INNER JOIN `question` on statistics.idQuestion = question.idQuestion GROUP BY statistics.idQuestion, question.idQuestion;";
+            MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
+
+            sqlCmd.CommandType = CommandType.Text;
+            MySqlDataReader reader = sqlCmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Question question = new Question();
+
+                {
+                    question.Sentence = reader.GetString(0);
+                    float temp = (float)Convert.ToDouble(reader.GetString(2)); //On affiche de facon correct le pourcentage
+                    temp = temp * 100 * -1;
+                    temp = (int)Convert.ToInt32(temp);
+                    question.Stat = temp.ToString();
+     
+
+                };
+                result.Add(question);
+            }
+            reader.Close();
+            sqlCon.Close();
+            return result;
+        }
     }
 
 }
