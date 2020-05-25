@@ -22,5 +22,7 @@ namespace Ways.Vues
         {
             InitializeComponent();
         }
+
+    
     }
 }

@@ -18,6 +18,9 @@
     <Compile Update="Vues\AdminScorePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Vues\AdminViewStats.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Vues\FormularyListPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -42,6 +45,12 @@
     <Compile Update="Vues\UserLoginPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Vues\UserOrientationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vues\UserScorePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Vues\WaysHomePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -57,6 +66,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\AdminScorePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\AdminViewStats.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\FormularyListPage.xaml">
@@ -81,6 +93,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\UserLoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\UserOrientationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vues\UserScorePage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Vues\WaysHomePage.xaml">
