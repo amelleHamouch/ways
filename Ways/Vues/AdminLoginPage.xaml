@@ -24,23 +24,23 @@
         </Grid.RowDefinitions>
             
             <StackPanel  Grid.Row="0">
-                <Label Content="Espace Administrateur" Foreground="White" FontSize="28" HorizontalAlignment="Center" ></Label>
+                <Label Content="Espace Administrateur" Foreground="Yellow" FontSize="28" HorizontalAlignment="Center" ></Label>
                 
                 <Separator></Separator>
             </StackPanel>
 
         <StackPanel Grid.Row="1">
-                <Label Content="Identifiant" Foreground="#005C75"></Label>
+                <Label Content="Identifiant" Foreground="White"></Label>
                 <TextBox Name="adminLogin" Background="#005C75" Foreground="White" FontSize="20"></TextBox>
             </StackPanel>
         
                 <StackPanel Grid.Row="2">
-                <Label Content="Mot de passe" Foreground="#005C75"></Label>
+                <Label Content="Mot de passe" Foreground="white"></Label>
                 <PasswordBox x:Name="adminPassBox" Background="#005C75" Foreground="White" FontSize="20"/>
                 </StackPanel>
                 
         <StackPanel Grid.Row="3">
-                <Button x:Name="submit" Content="Valider " Foreground="white" FontSize="22" Background="#ff7f50"  Width="132" Click="SubmitAdmin" />
+            <Button x:Name="submit" Content="Valider " Foreground="#005C75" FontSize="22" Background="Yellow"  Width="132" Click="SubmitAdmin" />
                 
             </StackPanel>
         <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Center" Grid.Row="3" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Height="52"/>
