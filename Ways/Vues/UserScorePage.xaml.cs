@@ -28,8 +28,10 @@ namespace Ways.Vues
             user = new User();
             user = User.getUserById(id);
             scoreUser = score;
+            user.updateUserScore(scoreUser, user.Id);
             userOrientation = orientation; listUsers.ItemsSource = user.GetAllUsers();
             ScoreLabel.Content = "Total :" + score.ToString();
+            
 
         }
 

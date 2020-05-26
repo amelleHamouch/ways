@@ -87,7 +87,7 @@ namespace Ways.Vues
             {
                 answer = rightAnswer.Text;
             }
-            score += answer == questionList[actualQuestion].ValidAnswer ? 1 : -1;  // Ternaire si question selectionnée = bonne réponse ajouter + ou - au score
+            score += answer == questionList[actualQuestion].ValidAnswer ? questionList[actualQuestion].Points : 0;  // Ternaire si question selectionnée = bonne réponse ajouter + ou - au score
 
             if (formId == 3 && actualQuestion != questionList.Count)
             {

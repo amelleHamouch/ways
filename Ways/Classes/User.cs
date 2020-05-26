@@ -111,7 +111,7 @@ namespace Ways.Classes
 
             if (sqlCon.State == ConnectionState.Closed)
                 sqlCon.Open();
-            String query = "SELECT * FROM user ;";
+            String query = "SELECT * FROM user WHERE isAdmin = 0 ORDER BY Score DESC;";
             MySqlCommand sqlCmd = new MySqlCommand(query, sqlCon);
 
             sqlCmd.Parameters.Add(new MySqlParameter("@idFormulary", id));
